@@ -1,6 +1,5 @@
 #! /bin/bash
 # This idea was taken from https://github.com/QV-dev/TuxTool, all credits to him.
-#! /bin/bash
 # This idea was taken from https://github.com/QV-dev/TuxTool, all credits to him.
 echo "
      _     _  _      _    ___  _
