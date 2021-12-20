@@ -8,6 +8,7 @@ special thanks to https://github.com/QV-dev/TuxTool, all credits to him!
 ## How to use?
 
 Extract the file in your desktop and make it an safe executable file.
+
 ![imagen](https://user-images.githubusercontent.com/80014347/146821624-08a121e1-5b56-439f-ba57-e65b5a19ee33.png)
 
 - Open your terminal in desktop and execute 
