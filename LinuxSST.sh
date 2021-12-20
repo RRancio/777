@@ -110,6 +110,10 @@ echo "# Analizing files..." ; sleep 2
 #general
 CheckDeletedFile=$(lsof -p $java | grep mods | grep deleted)
 CheckDeletedFile2=$(lsof -p $java | grep resourcepacks | grep deleted)
+XClicker=$(find -size 210112c | grep AppImage)
+Clicker7=$(find -size 358267c | grep jar)
+Vene=$(find -size 291968c | grep jar)
+JnativeHook=$(ls /tmp/ | grep JNativeHook)
 
 clear
 #1.8.9
@@ -335,17 +339,30 @@ if [[ $CheckDeletedFile7 == *'deleted'* ]]; then
 echo -e User has been flagged for Generic internal file deletion \(Check B\) >> $tmp
 fi
 if [[ $Rmodule7 == *'Reach'* ]]; then
-echo -e User has been flagged for Generic Reach module >> $tmp
+echo -e User has been flagged for Generic Reach module \(Check C\)  >> $tmp
 fi
 if [[ $Vmodule7 == *'Velocity'* ]]; then
-echo -e User has been flagged for Generic Velocity module >> $tmp
+echo -e User has been flagged for Generic Velocity module \(Check C\) >> $tmp
 fi
+#General
+if [[ $XClicker == *'AppImage'* ]]; then
+echo -e User has been flagged for Generic External Autoclicker [XClicker] \(Check A\) >> $tmp
+fi
+if [[ $Clicker7 == *'.jar'* ]]; then
+echo -e User has been flagged for Generic External Autoclicker [7CLicker] \(Check A\) >> $tmp
+fi
+if [[ $Vene == *'.jar'* ]]; then
+echo -e User has been flagged for Generic External Autoclicker [VeneClicker] \(Check A\) >> $tmp
+fi
+if [[ $JnativeHook == *'JNativeHook'* ]]; then
+echo -e User has been flagged for Generic autoclicker traces [JNAtiveHook] \(Check A\) >> $tmp
+fi
+
 echo "99"
 echo "# Writing results..." ; sleep 2
 clear
 echo -e "
-==========================================================
-Check explanation below!
+============== Check explanation below! ==============
 
 Check A: Ilegal version/mod was found on minecraft folder
 Check B: Ilegal modification in minecraft instance
