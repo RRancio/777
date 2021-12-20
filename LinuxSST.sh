@@ -1,6 +1,5 @@
 #! /bin/bash
 # This idea was taken from https://github.com/QV-dev/TuxTool, all credits to him.
-# This idea was taken from https://github.com/QV-dev/TuxTool, all credits to him.
 echo "
      _     _  _      _    ___  _
     / \   / \/ \  /|/ \ /\\\  \//
@@ -11,17 +10,18 @@ echo "
  Performed by discord.gg/screenshare
 "
 
-echo Scanning...
+echo Starting...
 sleep 4
 sleep 1 && wmctrl -r "Progress Status" -b add,above &
+{
 (
 clear
 dir=$(pwd)
 clear
-tmp=$(mktemp -u -t 'XXXXXX.scan')
+tmp=$(mktemp -u -t 'XXXXXX')
 echo =================== Detections ================= >> $tmp
 java=$(pidof "java")
-echo "25"
+echo "10"
 echo "# Analizing mods..." ; sleep 5
 ExplicitB9Check=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 476303)
 FenixCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 945117)
@@ -35,6 +35,8 @@ RavenB2Check2=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 116)
 RavenB1Check=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 54620)
 GucciClientCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 55628)
 SumoClientCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 149553)
+echo "40"
+echo "# Analizing mods..." ; sleep 5
 IncognitoCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 8674753)
 LowkeyCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 770390)
 OnycCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 149594)
@@ -61,7 +63,9 @@ Vmodule=$(cd ~/.minecraft/mods/1.8.9 && find . -name \*.jar -exec sh -c 'printf 
 Vape325=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 1485973) 
 RavenPlusEXP=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 2952819)
 RavenPlus=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 2878145)
-RavenPlus2=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 2878001) 
+RavenPlus2=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 2878001)
+echo "50"
+echo "# Analizing mods..." ; sleep 5 
 
 # 1.7.10
 ExplicitB9Check7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 476303)
@@ -79,6 +83,8 @@ SumoClientCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 149553)
 IncognitoCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 8674753)
 LowkeyCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 770390)
 OnycCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 149594)
+echo "60"
+echo "# Analizing mods..." ; sleep 5
 SakeCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 588131)
 SkilledCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 251173)
 SkilledB1Check7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 239784)
@@ -99,7 +105,7 @@ SkilledV37=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 896670)
 FDPClient7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 15173506) 
 Rmodule7=$(cd ~/.minecraft/mods/1.7.10 && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Reach)
 Vmodule7=$(cd ~/.minecraft/mods/1.7.10 && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Velocity)
-echo "50"
+echo "78"
 echo "# Analizing files..." ; sleep 2
 #general
 CheckDeletedFile=$(lsof -p $java | grep mods | grep deleted)
@@ -126,7 +132,7 @@ if [[ $TimeChangerCheck1 == *'29284'* ]]; then
 echo -e User has been caught using TimeChanger client \(Check A\) >> $tmp
 fi
 if [[ $TimeChangerCheck2 == *'14548'* ]]; then
-echo -e User has been caught using TimeChanger client \(Check B\) >> $tmp
+echo -e User has been caught using TimeChanger client \(Check A\) >> $tmp
 fi
 if [[ $RavenB2Check1 == *'118223'* ]]; then
 echo -e User has been caught using Raven B2 \(Check A\) >> $tmp
@@ -365,6 +371,11 @@ echo -e "
 " >> $tmp
 nordvpn status >> $tmp
 clear
+echo -e "
+============== Porn Detection ============== 
+" >> $tmp
+journalctl -u systemd-resolved | grep porn | awk '{print $9}' >> $tmp
+clear
 echo "# Successfully scanned!" ; sleep 2
 echo "100"
 ) |
@@ -377,6 +388,6 @@ zenity --progress \
 
 (( $? != 0 )) && zenity --error --text="Error in zenity command."
 
-echo -e Done!
-zenity --info --window-icon=info --title="Scan completed!" --text="Check /tmp/XXXX.scan file to analyze the results."
+zenity --info --window-icon=info --title="Scan completed!" --text="Check /tmp/XXXX file to analyze the results."
 nautilus /tmp/
+} &> /dev/null
