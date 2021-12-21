@@ -106,6 +106,11 @@ SkilledV37=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 896670)
 FDPClient7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 15173506) 
 Rmodule7=$(cd ~/.minecraft/mods/1.7.10 && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Reach)
 Vmodule7=$(cd ~/.minecraft/mods/1.7.10 && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Velocity)
+echo "70"
+echo "# Analizing versions..." ; sleep 5
+#versions
+lemonade=$(cd ~/.minecraft/versions && find -size 11865993c | grep jar)
+HuzuniVIP=$(cd ~/.minecraft/versions && find -size 9036441c | grep jar)
 echo "78"
 echo "# Analizing files..." ; sleep 2
 #general
@@ -116,6 +121,7 @@ Clicker7=$(find -size 358267c | grep jar)
 Vene=$(find -size 291968c | grep jar)
 lolxd=$(find -size 3444986c | grep jar)
 JnativeHook=$(ls /tmp/ | grep JNativeHook)
+epoch=$(cd && find -size 5380c | grep py)
 
 clear
 #1.8.9
@@ -362,6 +368,16 @@ fi
 if [[ $lolxd == *'.jar'* ]]; then
 echo -e User has been flagged for Generic External Autoclicker [lolxd v4.2] \(Check D\) >> $tmp
 fi
+if [[ $epoch == *'.py'* ]]; then
+echo -e User has been flagged for Generic External Autoclicker [epoch] \(Check D\) >> $tmp
+fi
+#versions
+if [[ $lemonade == *'.jar'* ]]; then
+echo -e User has been caught using Lemonade Client \(Check A\) >> $tmp
+fi
+if [[ $HuzuniVIP == *'.jar'* ]]; then
+echo -e User has been caught using Huzuni VIP 3.5 \(Check A\) >> $tmp
+fi
 
 echo "99"
 echo "# Writing results..." ; sleep 2
@@ -380,8 +396,7 @@ Check B: Ilegal modification in minecraft instance
 Check C: unsecure check
 Check D: Ilegal executable/log was found on the pc 
 " >> $tmp
-echo -e "
-============== Minecraft instance time ============== 
+echo -e "============== Minecraft instance time ============== 
 " >> $tmp
 ps -p $java -o etime | tr '\n' ' ' >> $tmp
 echo -e "
@@ -430,3 +445,4 @@ zenity --progress \
 zenity --info --window-icon=info --title="Scan completed!" --text="Check /tmp/XXXX file to analyze the results."
 nautilus /tmp/
 } &> /dev/null
+echo -e Scan completed!
