@@ -14,7 +14,7 @@ Extract the file in your desktop and make it an safe executable file.
 - Open your terminal in desktop and execute 
 
 ```sh
-bash LinuxSST.sh
+bash 777.sh
 ```
 
 ## Example
