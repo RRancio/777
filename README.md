@@ -19,7 +19,7 @@ bash LinuxSST.sh
 
 ## Example
 
-https://user-images.githubusercontent.com/80014347/146821909-c5d0d66b-a485-4a0c-be53-5dcf3726d29d.mp4
+https://user-images.githubusercontent.com/80014347/146951197-db1275a0-6c7a-4310-ba16-0ffe298f0b87.mp4
 
 ## Creator
 
