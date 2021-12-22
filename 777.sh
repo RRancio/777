@@ -1,5 +1,6 @@
 #! /bin/bash
 # This idea was taken from https://github.com/QV-dev/TuxTool, all credits to him.
+OS=$(cat /etc/issue | awk '{ print $1 $2 }')
 echo "
     ___________________________ 
     \______  \______  \______  \\
@@ -9,6 +10,8 @@ echo "
                             
        Linux Screenshare tool
  Performed by discord.gg/screenshare
+          
+          $OS Detected
 "
 echo Starting...
 sleep 4
