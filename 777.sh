@@ -117,10 +117,10 @@ echo "# Analizing files..." ; sleep 2
 #general
 CheckDeletedFile=$(lsof -p $java | grep mods | grep deleted)
 CheckDeletedFile2=$(lsof -p $java | grep resourcepacks | grep deleted)
-XClicker=$(find -size 210112c | grep AppImage)
-Clicker7=$(find -size 358267c | grep jar)
-Vene=$(find -size 291968c | grep jar)
-lolxd=$(find -size 3444986c | grep jar)
+XClicker=$(cd && find -size 210112c | grep AppImage)
+Clicker7=$(cd && find -size 358267c | grep jar)
+Vene=$(cd && find -size 291968c | grep jar)
+lolxd=$(cd && find -size 3444986c | grep jar)
 JnativeHook=$(ls /tmp/ | grep JNativeHook)
 epoch=$(cd && find -size 5380c | grep py)
 
