@@ -63,8 +63,9 @@ Rmodule=$(cd ~/.minecraft/mods/1.8.9 && find . -name \*.jar -exec sh -c 'printf 
 Vmodule=$(cd ~/.minecraft/mods/1.8.9 && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Velocity)
 Vape325=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 1485973) 
 RavenPlusEXP=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 2952819)
-RavenPlus=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 2878145)
-RavenPlus2=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 2878001)
+RavenPlus=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 2878145)
+RavenPlus2=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 2878001)
+GhostSense=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 232737)
 echo "50"
 echo "# Analizing mods..." ; sleep 5 
 
@@ -244,6 +245,9 @@ echo -e User has been caught using Raven b+ Client \(Check A\) >> $tmp
 fi
 if [[ $RavenPlus2 == *'2878001'* ]]; then
 echo -e User has been caught using Raven b+ Client \(Check A\) >> $tmp
+fi
+if [[ $GhostSense == *'232737'* ]]; then
+echo -e User has been caught using GhostSense b3 Client \(Check A\) >> $tmp
 fi
 
 #1.7.10
