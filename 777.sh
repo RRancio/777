@@ -27,6 +27,8 @@ echo "=================== Detections =================
 java=$(pidof "java")
 echo "10"
 echo "# Analizing mods..." ; sleep 5
+# ======================= mods 1.8.9 ==============================
+
 ExplicitB9Check=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 476303)
 FenixCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 945117)
 GhostSenseCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 232737)
@@ -69,66 +71,12 @@ RavenPlusEXP=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 2952819)
 RavenPlus=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 2878145)
 RavenPlus2=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 2878001)
 GhostSense=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 232737)
-echo "50"
-echo "# Analizing mods..." ; sleep 5 
+Raven3=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 212848)
 
-# 1.7.10
-ExplicitB9Check7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 476303)
-FenixCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 945117)
-GhostSenseCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 232737)
-NebulaCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 705585)
-BapeCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 1489573)
-TimeChangerCheck17=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 29284)
-TimeChangerCheck27=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 14548)
-RavenB2Check17=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 118223)
-RavenB2Check27=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 116)
-RavenB1Check7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 54620)
-GucciClientCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 55628)
-SumoClientCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 149553)
-IncognitoCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 8674753)
-LowkeyCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 770390)
-OnycCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 149594)
-echo "60"
-echo "# Analizing mods..." ; sleep 5
-SakeCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 588131)
-SkilledCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 251173)
-SkilledB1Check7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 239784)
-ReachModCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 4631)
-ReachModCheck27=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 5996)
-AzuryaCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 69653)
-RemoveHitDelay7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 7179)
-ButterflyMod7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 3785)
-GhostClient7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 236695)
-LiquidBounce7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 7245326)
-SativaCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 951771)
-UboaCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 221595)
-VeneCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 291968)
-WillyCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 3461783)
-SkilledV37=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 896670)
-RavenV27=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 210532)
-SkilledV37=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 896670)
-FDPClient7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 15173506) 
-Rmodule7=$(cd ~/.minecraft/mods/1.7.10 && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Reach)
-Vmodule7=$(cd ~/.minecraft/mods/1.7.10 && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Velocity)
-echo "70"
-echo "# Analizing versions..." ; sleep 5
-#versions
-lemonade=$(cd ~/.minecraft/versions && find -size 11865993c | grep jar)
-HuzuniVIP=$(cd ~/.minecraft/versions && find -size 9036441c | grep jar)
-echo "78"
-echo "# Analizing files..." ; sleep 2
-#general
-CheckDeletedFile=$(lsof -p $java | grep mods | grep deleted)
-CheckDeletedFile2=$(lsof -p $java | grep resourcepacks | grep deleted)
-XClicker=$(cd && find -size 210112c | grep AppImage)
-Clicker7=$(cd && find -size 358267c | grep jar)
-Vene=$(cd && find -size 291968c | grep jar)
-lolxd=$(cd && find -size 3444986c | grep jar)
-JnativeHook=$(ls /tmp/ | grep JNativeHook)
-epoch=$(cd && find -size 5380c | grep py)
+# ======================= mods 1.8.9 ==============================
 
-clear
-#1.8.9
+# =================== 1.8.9 txt paste ===========================
+
 if [[ $ExplicitB9Check == *'476303'* ]]; then
 echo -e User has been caught using Explicit \(Check A\) >> $tmp
 fi
@@ -249,11 +197,60 @@ fi
 if [[ $RavenPlus2 == *'2878001'* ]]; then
 echo -e User has been caught using Raven b+ Client \(Check A\) >> $tmp
 fi
-if [[ $GhostSense == *'232737'* ]]; then
-echo -e User has been caught using GhostSense b3 Client \(Check A\) >> $tmp
+if [[ $Raven3 == *'212848'* ]]; then
+echo -e User has been caught using Raven Client V3 \(Check A\) >> $tmp
 fi
 
-#1.7.10
+# =================== txt paste ===========================
+
+echo "50"
+echo "# Analizing mods..." ; sleep 5 
+
+# ===================== mods 1.7.10 ========================
+
+ExplicitB9Check7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 476303)
+FenixCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 945117)
+GhostSenseCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 232737)
+NebulaCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 705585)
+BapeCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 1489573)
+TimeChangerCheck17=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 29284)
+TimeChangerCheck27=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 14548)
+RavenB2Check17=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 118223)
+RavenB2Check27=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 116)
+RavenB1Check7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 54620)
+GucciClientCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 55628)
+SumoClientCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 149553)
+IncognitoCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 8674753)
+LowkeyCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 770390)
+OnycCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 149594)
+echo "60"
+echo "# Analizing mods..." ; sleep 5
+SakeCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 588131)
+SkilledCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 251173)
+SkilledB1Check7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 239784)
+ReachModCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 4631)
+ReachModCheck27=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 5996)
+AzuryaCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 69653)
+RemoveHitDelay7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 7179)
+ButterflyMod7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 3785)
+GhostClient7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 236695)
+LiquidBounce7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 7245326)
+SativaCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 951771)
+UboaCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 221595)
+VeneCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 291968)
+WillyCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 3461783)
+SkilledV37=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 896670)
+RavenV27=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 210532)
+SkilledV37=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 896670)
+FDPClient7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 15173506) 
+Rmodule7=$(cd ~/.minecraft/mods/1.7.10 && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Reach)
+Vmodule7=$(cd ~/.minecraft/mods/1.7.10 && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Velocity)
+Raven37=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 212848)
+
+# ===================== mods 1.7.10 ========================
+
+# ===================== mods paste =========================
+
 if [[ $ExplicitB9Check7 == *'476303'* ]]; then
 echo -e User has been caught using Explicit \(Check A\) >> $tmp
 fi
@@ -359,7 +356,30 @@ fi
 if [[ $Vmodule7 == *'Velocity'* ]]; then
 echo -e User has been flagged for Generic Velocity module \(Check C\) >> $tmp
 fi
-#General
+
+# ===================== mods paste =========================
+
+echo "78"
+echo "# Analizing files..." ; sleep 2
+
+# ========================== general =======================================
+
+CheckDeletedFile=$(lsof -p $java | grep mods | grep deleted)
+CheckDeletedFile2=$(lsof -p $java | grep resourcepacks | grep deleted)
+XClicker=$(cd && find -size 210112c | grep AppImage)
+Clicker7=$(cd && find -size 358267c | grep jar)
+Vene=$(cd && find -size 291968c | grep jar)
+lolxd=$(cd && find -size 3444986c | grep jar)
+JnativeHook=$(ls /tmp/ | grep JNativeHook)
+epoch=$(cd && find -size 5380c | grep py)
+users2=$(who -q)
+JavaAC=$(cd && find -size 412957 | grep jar)
+GenericRecorder=$(wmctrl -l | awk '{print $4 $5}' | grep Recorder)
+
+# ========================== general =======================================
+
+# ========================== general paste =======================================
+
 if [[ $XClicker == *'AppImage'* ]]; then
 echo -e User has been flagged for Generic External Autoclicker [XClicker] \(Check D\) >> $tmp
 fi
@@ -378,7 +398,30 @@ fi
 if [[ $epoch == *'.py'* ]]; then
 echo -e User has been flagged for Generic External Autoclicker [epoch] \(Check D\) >> $tmp
 fi
-#versions
+if [[ $users2 == *'=2'* ]]; then
+echo -e User has been flagged for 2 logged users \(Check C\) >> $tmp
+fi
+if [[ $JavaAC == *'.jar'* ]]; then
+echo -e User has been flagged for Generic Autoclicker [literally has no name] \(Check D\) >> $tmp
+fi
+if [[ $GenericRecorder == *'Recorder'* ]]; then
+echo -e User has been flagged for Generic Screen recorder in instance \(Check C\) >> $tmp
+fi
+
+# ========================== general paste =======================================
+
+# ========================== Versions =======================================
+
+lemonade=$(cd ~/.minecraft/versions && find -size 11865993c | grep jar)
+HuzuniVIP=$(cd ~/.minecraft/versions && find -size 9036441c | grep jar)
+
+# ========================== Versions =======================================
+
+echo "70"
+echo "# Analizing versions..." ; sleep 5
+
+# ========================== Versions paste =======================================
+
 if [[ $lemonade == *'.jar'* ]]; then
 echo -e User has been caught using Lemonade Client \(Check A\) >> $tmp
 fi
@@ -386,13 +429,315 @@ if [[ $HuzuniVIP == *'.jar'* ]]; then
 echo -e User has been caught using Huzuni VIP 3.5 \(Check A\) >> $tmp
 fi
 
-echo "99"
+# ========================== Versions paste =======================================
+
+# ========================== mods general =======================================
+
+GSakeCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 588131)
+GSkilledCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 251173)
+GSkilledB1Check=$(cd ~/.minecraft/mods/ && ls -ls | grep 239784)
+GReachModCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 4631)
+GReachModCheck2=$(cd ~/.minecraft/mods/ && ls -ls | grep 5996)
+GAzuryaCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 69653)
+GRemoveHitDelay=$(cd ~/.minecraft/mods/ && ls -ls | grep 7179)
+GButterflyMod=$(cd ~/.minecraft/mods/ && ls -ls | grep 3785)
+GGhostClient=$(cd ~/.minecraft/mods/ && ls -ls | grep 236695)
+GLiquidBounce=$(cd ~/.minecraft/mods/ && ls -ls | grep 7245326)
+GSativaCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 951771)
+GUboaCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 221595)
+GVeneCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 291968)
+GWillyCheck=$(cd ~/.minecraft/mods/&& ls -ls | grep 3461783)
+GSkilledV3=$(cd ~/.minecraft/mods/ && ls -ls | grep 896670)
+GRavenV2=$(cd ~/.minecraft/mods/ && ls -ls | grep 210532)
+GSkilledV3=$(cd ~/.minecraft/mods/ && ls -ls | grep 896670)
+GFDPClient=$(cd ~/.minecraft/mods/ && ls -ls | grep 15173506) 
+GRmodule=$(cd ~/.minecraft/mods/ && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Reach)
+GVmodule=$(cd ~/.minecraft/mods/ && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Velocity)
+GExplicitB9Check=$(cd ~/.minecraft/mods/ && ls -ls | grep 476303)
+GFenixCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 945117)
+GGhostSenseCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 232737)
+GNebulaCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 705585)
+GBapeCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 1489573)
+GTimeChangerCheck1=$(cd ~/.minecraft/mods/ && ls -ls | grep 29284)
+GTimeChangerCheck2=$(cd ~/.minecraft/mods/ && ls -ls | grep 14548)
+GRavenB2Check1=$(cd ~/.minecraft/mods/ && ls -ls | grep 118223)
+GRavenB2Check2=$(cd ~/.minecraft/mods/ && ls -ls | grep 116)
+GRavenB1Check=$(cd ~/.minecraft/mods/ && ls -ls | grep 54620)
+GGucciClientCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 55628)
+GSumoClientCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 149553)
+GIncognitoCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 8674753)
+GLowkeyCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 770390)
+GOnycCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 149594)
+GSakeCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 588131)
+GSkilledCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 251173)
+GSkilledB1Check=$(cd ~/.minecraft/mods/ && ls -ls | grep 239784)
+GReachModCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 4631)
+GReachModCheck2=$(cd ~/.minecraft/mods/ && ls -ls | grep 5996)
+GAzuryaCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 69653)
+GRemoveHitDelay=$(cd ~/.minecraft/mods/ && ls -ls | grep 7179)
+GButterflyMod=$(cd ~/.minecraft/mods/ && ls -ls | grep 3785)
+GGhostClient=$(cd ~/.minecraft/mods/ && ls -ls | grep 236695)
+GLiquidBounce=$(cd ~/.minecraft/mods/ && ls -ls | grep 7245326)
+GSativaCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 951771)
+GUboaCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 221595)
+GVeneCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 291968)
+GWillyCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 3461783)
+GSkilledV3=$(cd ~/.minecraft/mods/ && ls -ls | grep 896670)
+GRavenV2=$(cd ~/.minecraft/mods/ && ls -ls | grep 210532)
+GSkilledV3=$(cd ~/.minecraft/mods/ && ls -ls | grep 896670)
+GFDPClient=$(cd ~/.minecraft/mods/ && ls -ls | grep 15173506)
+GVape325=$(cd ~/.minecraft/mods/ && ls -ls | grep 1485973) 
+GRavenPlusEXP=$(cd ~/.minecraft/mods/ && ls -ls | grep 2952819)
+GRavenPlus=$(cd ~/.minecraft/mods/ && ls -ls | grep 2878145)
+GRavenPlus2=$(cd ~/.minecraft/mods/ && ls -ls | grep 2878001)
+GRaven3=$(cd ~/.minecraft/mods/ && ls -ls | grep 212848)
+
+# ========================== mods general =======================================
+
+# ========================== mods general paste =======================================
+
+if [[ $GExplicitB9Check == *'476303'* ]]; then
+echo -e User has been caught using Explicit \(Check A\) >> $tmp
+fi
+if [[ $GFenixCheck == *'945117'* ]]; then
+echo -e User has been caught using Fenix \(Check A\) >> $tmp
+fi
+if [[ $GGhostSenseCheck == *'232737'* ]]; then
+echo -e User has been caught using Ghost Sense \(Check A\) >> $tmp 
+fi
+if [[ $GNebulaCheck == *'705585'* ]]; then
+echo -e User has been caught using Nebula God Client \(Check A\) >> $tmp
+fi
+if [[ $GBapeCheck == '*1489573'* ]]; then
+echo -e User has been caught using Bape or Cracked vape \(Check A\)
+fi
+if [[ $GTimeChangerCheck1 == *'29284'* ]]; then
+echo -e User has been caught using TimeChanger client \(Check A\) >> $tmp
+fi
+if [[ $GTimeChangerCheck2 == *'14548'* ]]; then
+echo -e User has been caught using TimeChanger client \(Check B\) >> $tmp
+fi
+if [[ $GRavenB2Check1 == *'118223'* ]]; then
+echo -e User has been caught using Raven B2 \(Check A\) >> $tmp
+fi
+if [[ $GRavenB2Check2 == *'116'* ]]; then
+echo -e User has been caught using Raven B2 \(Check B\) >> $tmp
+fi
+if [[ $GRavenB1Check == *'54620'* ]]; then
+echo -e User has been caught using Raven B1 \(Check A\) >> $tmp
+fi
+if [[ $GGucciClientCheck == *'55628'* ]]; then
+echo -e User has been caught using Gucci Client \(Check A\) >> $tmp
+fi
+if [[ $GSumoClientCheck == *'149553'* ]]; then
+echo -e User has been caught using Gucci Client \(Check A\) >> $tmp
+fi
+if [[ $GIncognitoCheck == *'8674753'* ]]; then
+echo -e User has been caught using Incognito Client \(Check A\) >> $tmp
+fi
+if [[ $GLowkeyCheck == *'770390'* ]]; then
+echo -e User has been caught using Incognito Client \(Check A\) >> $tmp
+fi
+if [[ $GOnycCheck == *'149594'* ]]; then
+echo -e User has been caught using Onyx Client \(Check A\) >> $tmp
+fi
+if [[ $GSakeCheck == *'588131'* ]]; then
+echo -e User has been caught using Sake Client \(Check A\) >> $tmp
+fi
+if [[ $GSkilledCheck == *'251173'* ]];then
+echo -e User has been caught using Skilled B2 \(Check A\) >> $tmp
+fi
+if [[ $GSkilledB1Check == *'239784'* ]]; then
+echo -e User has been caught using Skilled B1 \(Check A\) >> $tmp
+fi
+if [[ $GReachModCheck == *"4631"* ]]; then
+echo -e User has been caught using a reach mod \(Check A\) >> $tmp
+fi
+if [[ $GReachModCheck2 == *'5996'* ]]; then
+echo -e User has been caught using a reach mod \(Check A\) >> $tmp
+fi
+if [[ $GAzuryaCheck == *'69653'* ]]; then
+echo -e User has been caught using Azurya Client \(Check A\) >> $tmp
+fi
+if [[ $GRemoveHitDelay == *'7179'* ]]; then
+echo -e User has been caught using a mod that removes the 1.8.9 hit delay. >> $tmp
+fi
+if [[ $GButterflyMod == *'3785'* ]]; then
+echo -e User has been caught using a mod that simulates butterfly clicks \(BANNABLE\) >> $tmp
+fi
+if [[ $GGhostClient == *'236695'* ]]; then
+echo -e User has been caught using a generic Ghost Client \( Check A\) >> $tmp
+fi
+if [[ $GLiquidBounce == *'7245326'* ]]; then
+echo -e User is using LiquidBounce \(Check A\) >> $tmp
+fi
+if [[ $GSativaCheck == *'951771'* ]]; then
+echo -e User has been caught using Sativa Client \(Check A\) >> $tmp
+fi
+if [[ $GUboaCheck == *'221595'* ]]; then
+echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+fi
+if [[ $GVeneCheck == *'291968'* ]]; then
+echo -e User has been caught using Vene Client \(Check A\) >> $tmp
+fi
+if [[ $GWillyCheck == *'3461783'* ]]; then
+echo -e User has been caught using Willy Client \(Check A\) >> $tmp
+fi
+if [[ $GSkilledV3 == *'896670'* ]]; then
+echo -e User has been caught using Skilled Client V3 \(Check A\) >> $tmp
+fi
+if [[ $GRavenV2 == *'210532'* ]]; then
+echo -e User has been caught using Raven Client V2 \(Check A\) >> $tmp
+fi
+if [[ $GFDPClient == *'15173506'* ]]; then
+echo -e User has been caught using FDP Client \(Check A\) >> $tmp
+fi
+if [[ $GCheckDeletedFile == *'deleted'* ]]; then
+echo -e User has been flagged for Generic internal file deletion \(Check B\) >> $tmp
+fi
+if [[ $GRmodule == *'Reach'* ]]; then
+echo -e User has been flagged for Generic Reach module \(Check C\)  >> $tmp
+fi
+if [[ $GVmodule == *'Velocity'* ]]; then
+echo -e User has been flagged for Generic Velocity module \(Check C\) >> $tmp
+fi
+if [[ $GRaven3 == *'212848'* ]]; then
+echo -e User has been caught using Raven Client V3 \(Check A\) >> $tmp
+fi
+if [[ $GExplicitB9Check == *'476303'* ]]; then
+echo -e User has been caught using Explicit \(Check A\) >> $tmp
+fi
+if [[ $GFenixCheck == *'945117'* ]]; then
+echo -e User has been caught using Fenix \(Check A\) >> $tmp
+fi
+if [[ $GGhostSenseCheck == *'232737'* ]]; then
+echo -e User has been caught using Ghost Sense \(Check A\) >> $tmp 
+fi
+if [[ $GNebulaCheck == *'705585'* ]]; then
+echo -e User has been caught using Nebula God Client \(Check A\) >> $tmp
+fi
+if [[ $GBapeCheck == '*1489573'* ]]; then
+echo -e User has been caught using Bape or Cracked vape \(Check A\)
+fi
+if [[ $GTimeChangerCheck1 == *'29284'* ]]; then
+echo -e User has been caught using TimeChanger client \(Check A\) >> $tmp
+fi
+if [[ $GTimeChangerCheck2 == *'14548'* ]]; then
+echo -e User has been caught using TimeChanger client \(Check A\) >> $tmp
+fi
+if [[ $GRavenB2Check1 == *'118223'* ]]; then
+echo -e User has been caught using Raven B2 \(Check A\) >> $tmp
+fi
+if [[ $GRavenB2Check2 == *'116'* ]]; then
+echo -e User has been caught using Raven B2 \(Check B\) >> $tmp
+fi
+if [[ $GRavenB1Check == *'54620'* ]]; then
+echo -e User has been caught using Raven B1 \(Check A\) >> $tmp
+fi
+if [[ $GGucciClientCheck == *'55628'* ]]; then
+echo -e User has been caught using Gucci Client \(Check A\) >> $tmp
+fi
+if [[ $GSumoClientCheck == *'149553'* ]]; then
+echo -e User has been caught using Gucci Client \(Check A\) >> $tmp
+fi
+if [[ $GIncognitoCheck == *'8674753'* ]]; then
+echo -e User has been caught using Incognito Client \(Check A\) >> $tmp
+fi
+if [[ $GLowkeyCheck == *'770390'* ]]; then
+echo -e User has been caught using Incognito Client \(Check A\) >> $tmp
+fi
+if [[ $GOnycCheck == *'149594'* ]]; then
+echo -e User has been caught using Onyx Client \(Check A\) >> $tmp
+fi
+if [[ $GSakeCheck == *'588131'* ]]; then
+echo -e User has been caught using Sake Client \(Check A\) >> $tmp
+fi
+if [[ $GSkilledCheck == *'251173'* ]];then
+echo -e User has been caught using Skilled B2 \(Check A\) >> $tmp
+fi
+if [[ $GSkilledB1Check == *'239784'* ]]; then
+echo -e User has been caught using Skilled B1 \(Check A\) >> $tmp
+fi
+if [[ $GReachModCheck == *"4631"* ]]; then
+echo -e User has been caught using a reach mod \(Check A\) >> $tmp
+fi
+if [[ $GReachModCheck2 == *'5996'* ]]; then
+echo -e User has been caught using a reach mod \(Check B\) >> $tmp
+fi
+if [[ $GAzuryaCheck == *'69653'* ]]; then
+echo -e User has been caught using Azurya Client \(Check A\) >> $tmp
+fi
+if [[ $GRemoveHitDelay == *'7179'* ]]; then
+echo -e User has been caught using a mod that removes the 1.8.9 hit delay. >> $tmp
+fi
+if [[ $GButterflyMod == *'3785'* ]]; then
+echo -e User has been caught using a mod that simulates butterfly clicks \(BANNABLE\) >> $tmp
+fi
+if [[ $GGhostClient == *'236695'* ]]; then
+echo -e User has been caught using a generic Ghost Client \( Check A\) >> $tmp
+fi
+if [[ $GLiquidBounce == *'7245326'* ]]; then
+echo -e User is using LiquidBounce \(Check A\) >> $tmp
+fi
+if [[ $GSativaCheck == *'951771'* ]]; then
+echo -e User has been caught using Sativa Client \(Check A\) >> $tmp
+fi
+if [[ $GUboaCheck == *'221595'* ]]; then
+echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+fi
+if [[ $GVeneCheck == *'291968'* ]]; then
+echo -e User has been caught using Vene Client \(Check A\) >> $tmp
+fi
+if [[ $GWillyCheck == *'3461783'* ]]; then
+echo -e User has been caught using Willy Client \(Check A\) >> $tmp
+fi
+if [[ $GSkilledV3 == *'896670'* ]]; then
+echo -e User has been caught using Skilled Client V3 \(Check A\) >> $tmp
+fi
+if [[ $GRavenV2 == *'210532'* ]]; then
+echo -e User has been caught using Raven Client V2 \(Check A\) >> $tmp
+fi
+if [[ $GFDPClient == *'15173506'* ]]; then
+echo -e User has been caught using FDP Client \(Check A\) >> $tmp
+fi
+if [[ $GCheckDeletedFile == *'deleted'* ]]; then
+echo -e "User has been flagged for Generic internal file deletion (MOD) (Check B)" >> $tmp
+fi
+if [[ $GCheckDeletedFile2 == *'deleted'* ]]; then
+echo -e "User has been flagged for Generic internal file deletion (Resource Pack) (Check B)" >> $tmp
+fi
+if [[ $GRmodule == *'Reach'* ]]; then
+echo -e User has been flagged for Generic Reach module \(Check C\) >> $tmp
+fi
+if [[ $GVmodule == *'Velocity'* ]]; then
+echo -e User has been flagged for Generic Velocity module \(Check C\) >> $tmp
+fi
+if [[ $GVape325 == *'1485973'* ]]; then
+echo -e User has been caught using Vape 3.25 Cracked \(Check A\) >> $tmp
+fi
+if [[ $GRavenPlusEXP == *'2952819'* ]]; then
+echo -e User has been caught using Raven b+ [experimental client] \(Check A\) >> $tmp
+fi
+if [[ $GRavenPlus == *'2878145'* ]]; then
+echo -e User has been caught using Raven b+ Client \(Check A\) >> $tmp
+fi
+if [[ $GRavenPlus2 == *'2878001'* ]]; then
+echo -e User has been caught using Raven b+ Client \(Check A\) >> $tmp
+fi
+if [[ $GRaven3 == *'212848'* ]]; then
+echo -e User has been caught using Raven Client V3 \(Check A\) >> $tmp
+fi
+
+# ========================== mods general paste =======================================
+
+nashe=$($tmp)
+echo "98"
 echo "# Writing results..." ; sleep 2
 clear
 echo -e "============== Deleted in instance files ==============
 " >> $tmp
 echo -e Deleted mods found: && lsof -p $java | grep mods | grep deleted | awk '{print $9} {print $10} {print $11}' | tr '\n' ' ' >> $tmp
-echo -e Deleted ResourcePacks found: && lsof -p $java | grep resourcepacks | grep deleted | awk '{print $10} {print $11}' | tr '\n' ' ' >> $tmp
+echo -e Deleted resourceracks found: && lsof -p $java | grep resourcepack | grep deleted | awk '{print $10} {print $11}' | tr '\n' ' ' >> $tmp
 echo -e "
 " >> $tmp
 echo -e "
@@ -431,6 +776,13 @@ echo -e "
 " >> $tmp
 clear
 echo -e "
+============== Active users  ============== 
+" >> $tmp
+who -H >> $tmp
+echo -e "
+" >> $tmp
+
+echo -e "
 ============== Porn Detection ============== 
 " >> $tmp
 journalctl -u systemd-resolved | grep porn | awk '{print $9}' >> $tmp
@@ -449,7 +801,7 @@ zenity --progress \
 
 (( $? != 0 )) && zenity --error --text="Error in zenity command."
 
-zenity --info --window-icon=info --title="Scan completed!" --text="Check /tmp/XXXX file to analyze the results."
-nautilus /tmp/
+zenity --info --window-icon=info --title="Scan completed!" --text="Check /tmp/$tmp file to analyze the results."
 } &> /dev/null
 echo -e Scan completed!
+nautilus /tmp/
