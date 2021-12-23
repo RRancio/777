@@ -20,8 +20,11 @@ sleep 1 && wmctrl -r "Progress Status" -b add,above &
 (
 clear
 dir=$(pwd)
+nordvpn status
 clear
-tmp=$(mktemp -u -t 'XXXXXX')
+RR=$($RANDOM)
+tmp=$(mktemp -u -t $RR'777-XXXXXXXXXX.scan.txt')
+tmpname=$($tmp)
 echo "=================== Detections =================
 " >> $tmp
 java=$(pidof "java")
@@ -79,126 +82,208 @@ Raven3=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 212848)
 
 if [[ $ExplicitB9Check == *'476303'* ]]; then
 echo -e User has been caught using Explicit \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $FenixCheck == *'945117'* ]]; then
 echo -e User has been caught using Fenix \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GhostSenseCheck == *'232737'* ]]; then
 echo -e User has been caught using Ghost Sense \(Check A\) >> $tmp 
+echo "
+" >> $tmp
 fi
 if [[ $NebulaCheck == *'705585'* ]]; then
 echo -e User has been caught using Nebula God Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $BapeCheck == '*1489573'* ]]; then
 echo -e User has been caught using Bape or Cracked vape \(Check A\)
+echo "
+" >> $tmp
 fi
 if [[ $TimeChangerCheck1 == *'29284'* ]]; then
 echo -e User has been caught using TimeChanger client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $TimeChangerCheck2 == *'14548'* ]]; then
 echo -e User has been caught using TimeChanger client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $RavenB2Check1 == *'118223'* ]]; then
 echo -e User has been caught using Raven B2 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $RavenB2Check2 == *'116'* ]]; then
 echo -e User has been caught using Raven B2 \(Check B\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $RavenB1Check == *'54620'* ]]; then
 echo -e User has been caught using Raven B1 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GucciClientCheck == *'55628'* ]]; then
 echo -e User has been caught using Gucci Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $SumoClientCheck == *'149553'* ]]; then
 echo -e User has been caught using Gucci Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $IncognitoCheck == *'8674753'* ]]; then
 echo -e User has been caught using Incognito Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $LowkeyCheck == *'770390'* ]]; then
 echo -e User has been caught using Incognito Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $OnycCheck == *'149594'* ]]; then
 echo -e User has been caught using Onyx Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $SakeCheck == *'588131'* ]]; then
 echo -e User has been caught using Sake Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $SkilledCheck == *'251173'* ]];then
 echo -e User has been caught using Skilled B2 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $SkilledB1Check == *'239784'* ]]; then
 echo -e User has been caught using Skilled B1 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $ReachModCheck == *"4631"* ]]; then
 echo -e User has been caught using a reach mod \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $ReachModCheck2 == *'5996'* ]]; then
 echo -e User has been caught using a reach mod \(Check B\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $AzuryaCheck == *'69653'* ]]; then
 echo -e User has been caught using Azurya Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $RemoveHitDelay == *'7179'* ]]; then
 echo -e User has been caught using a mod that removes the 1.8.9 hit delay. >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $ButterflyMod == *'3785'* ]]; then
 echo -e User has been caught using a mod that simulates butterfly clicks \(BANNABLE\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GhostClient == *'236695'* ]]; then
 echo -e User has been caught using a generic Ghost Client \( Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $LiquidBounce == *'7245326'* ]]; then
 echo -e User is using LiquidBounce \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $SativaCheck == *'951771'* ]]; then
 echo -e User has been caught using Sativa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $UboaCheck == *'221595'* ]]; then
 echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $VeneCheck == *'291968'* ]]; then
 echo -e User has been caught using Vene Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $WillyCheck == *'3461783'* ]]; then
 echo -e User has been caught using Willy Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $SkilledV3 == *'896670'* ]]; then
 echo -e User has been caught using Skilled Client V3 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $RavenV2 == *'210532'* ]]; then
 echo -e User has been caught using Raven Client V2 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $FDPClient == *'15173506'* ]]; then
 echo -e User has been caught using FDP Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $CheckDeletedFile == *'deleted'* ]]; then
 echo -e "User has been flagged for Generic internal file deletion (MOD) (Check B)" >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $CheckDeletedFile2 == *'deleted'* ]]; then
 echo -e "User has been flagged for Generic internal file deletion (Resource Pack) (Check B)" >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $Rmodule == *'Reach'* ]]; then
 echo -e User has been flagged for Generic Reach module \(Check C\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $Vmodule == *'Velocity'* ]]; then
 echo -e User has been flagged for Generic Velocity module \(Check C\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $Vape325 == *'1485973'* ]]; then
 echo -e User has been caught using Vape 3.25 Cracked \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $RavenPlusEXP == *'2952819'* ]]; then
 echo -e User has been caught using Raven b+ [experimental client] \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $RavenPlus == *'2878145'* ]]; then
 echo -e User has been caught using Raven b+ Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $RavenPlus2 == *'2878001'* ]]; then
 echo -e User has been caught using Raven b+ Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $Raven3 == *'212848'* ]]; then
 echo -e User has been caught using Raven Client V3 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 
 # =================== txt paste ===========================
@@ -253,108 +338,178 @@ Raven37=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 212848)
 
 if [[ $ExplicitB9Check7 == *'476303'* ]]; then
 echo -e User has been caught using Explicit \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $FenixCheck7 == *'945117'* ]]; then
 echo -e User has been caught using Fenix \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GhostSenseCheck7 == *'232737'* ]]; then
 echo -e User has been caught using Ghost Sense \(Check A\) >> $tmp 
+echo "
+" >> $tmp
 fi
 if [[ $NebulaCheck7 == *'705585'* ]]; then
 echo -e User has been caught using Nebula God Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $BapeCheck7 == '*1489573'* ]]; then
 echo -e User has been caught using Bape or Cracked vape \(Check A\)
+echo "
+" >> $tmp
 fi
 if [[ $TimeChangerCheck17 == *'29284'* ]]; then
 echo -e User has been caught using TimeChanger client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $TimeChangerCheck27 == *'14548'* ]]; then
 echo -e User has been caught using TimeChanger client \(Check B\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $RavenB2Check17 == *'118223'* ]]; then
 echo -e User has been caught using Raven B2 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $RavenB2Check27 == *'116'* ]]; then
 echo -e User has been caught using Raven B2 \(Check B\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $RavenB1Check7 == *'54620'* ]]; then
 echo -e User has been caught using Raven B1 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GucciClientCheck7 == *'55628'* ]]; then
 echo -e User has been caught using Gucci Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $SumoClientCheck7 == *'149553'* ]]; then
 echo -e User has been caught using Gucci Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $IncognitoCheck7 == *'8674753'* ]]; then
 echo -e User has been caught using Incognito Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $LowkeyCheck7 == *'770390'* ]]; then
 echo -e User has been caught using Incognito Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $OnycCheck7 == *'149594'* ]]; then
 echo -e User has been caught using Onyx Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $SakeCheck7 == *'588131'* ]]; then
 echo -e User has been caught using Sake Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $SkilledCheck7 == *'251173'* ]];then
 echo -e User has been caught using Skilled B2 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $SkilledB1Check7 == *'239784'* ]]; then
 echo -e User has been caught using Skilled B1 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $ReachModCheck7 == *"4631"* ]]; then
 echo -e User has been caught using a reach mod \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $ReachModCheck27 == *'5996'* ]]; then
 echo -e User has been caught using a reach mod \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $AzuryaCheck7 == *'69653'* ]]; then
 echo -e User has been caught using Azurya Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $RemoveHitDelay7 == *'7179'* ]]; then
 echo -e User has been caught using a mod that removes the 1.8.9 hit delay. >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $ButterflyMod7 == *'3785'* ]]; then
 echo -e User has been caught using a mod that simulates butterfly clicks \(BANNABLE\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GhostClient7 == *'236695'* ]]; then
 echo -e User has been caught using a generic Ghost Client \( Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $LiquidBounce7 == *'7245326'* ]]; then
 echo -e User is using LiquidBounce \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $SativaCheck7 == *'951771'* ]]; then
 echo -e User has been caught using Sativa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $UboaCheck7 == *'221595'* ]]; then
 echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $VeneCheck7 == *'291968'* ]]; then
 echo -e User has been caught using Vene Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $WillyCheck7 == *'3461783'* ]]; then
 echo -e User has been caught using Willy Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $SkilledV37 == *'896670'* ]]; then
 echo -e User has been caught using Skilled Client V3 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $RavenV27 == *'210532'* ]]; then
 echo -e User has been caught using Raven Client V2 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $FDPClient7 == *'15173506'* ]]; then
 echo -e User has been caught using FDP Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $CheckDeletedFile7 == *'deleted'* ]]; then
 echo -e User has been flagged for Generic internal file deletion \(Check B\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $Rmodule7 == *'Reach'* ]]; then
 echo -e User has been flagged for Generic Reach module \(Check C\)  >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $Vmodule7 == *'Velocity'* ]]; then
 echo -e User has been flagged for Generic Velocity module \(Check C\) >> $tmp
+echo "
+" >> $tmp
 fi
 
 # ===================== mods paste =========================
@@ -372,41 +527,83 @@ Vene=$(cd && find -size 291968c | grep jar)
 lolxd=$(cd && find -size 3444986c | grep jar)
 JnativeHook=$(ls /tmp/ | grep JNativeHook)
 epoch=$(cd && find -size 5380c | grep py)
+GenericAC=$(cd && find -name AutoClicker | grep .jar)
 users2=$(who -q)
 JavaAC=$(cd && find -size 412957 | grep jar)
 GenericRecorder=$(wmctrl -l | awk '{print $4 $5}' | grep Recorder)
-
+GenericRecorder2=$(ps -aux | grep simplescreenrecorder --logfile)
+OBS=$(ps -aux | grep /snap/obs-studio/1284/usr/bin/obs)
+Kazam=$(ps -aux | grep "kazam")
+Kazam2=$(wmctrl -l | awk '{print $4 $5}' | grep Kazam)
 # ========================== general =======================================
 
 # ========================== general paste =======================================
 
 if [[ $XClicker == *'AppImage'* ]]; then
 echo -e User has been flagged for Generic External Autoclicker [XClicker] \(Check D\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $Clicker7 == *'.jar'* ]]; then
 echo -e User has been flagged for Generic External Autoclicker [7CLicker] \(Check D\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $Vene == *'.jar'* ]]; then
 echo -e User has been flagged for Generic External Autoclicker [VeneClicker] \(Check D\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $JnativeHook == *'JNativeHook'* ]]; then
 echo -e User has been flagged for Generic autoclicker traces [JNAtiveHook] \(Check D\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $lolxd == *'.jar'* ]]; then
 echo -e User has been flagged for Generic External Autoclicker [lolxd v4.2] \(Check D\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $epoch == *'.py'* ]]; then
 echo -e User has been flagged for Generic External Autoclicker [epoch] \(Check D\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $users2 == *'=2'* ]]; then
 echo -e User has been flagged for 2 logged users \(Check C\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $JavaAC == *'.jar'* ]]; then
 echo -e User has been flagged for Generic Autoclicker [literally has no name] \(Check D\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GenericRecorder == *'Recorder'* ]]; then
 echo -e User has been flagged for Generic Screen recorder in instance \(Check C\) >> $tmp
+echo "
+" >> $tmp
 fi
+if [[ $OBS == *'Sl'* ]]; then
+echo -e User has been flagged for Generic Screen recorder in instance [OBS] \(Check C\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $simplescreenrecorder == *'simplescreenrecorder --logfile'* ]]; then
+echo -e User has been flagged for Generic Screen recorder in instance [Simple Screen Recorder] \(Check C\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $Kazam == *'?'* ]]; then
+echo -e User has been flagged for Generic Screen recorder in instance [Kazam] \(Check C\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $GenericAC == *'.jar'* ]]; then
+echo -e User has been flagged for Generic Autoclicker [Generic name] \(Check C\) >> $tmp
+echo "
+" >> $tmp
+fi    
 
 # ========================== general paste =======================================
 
@@ -424,9 +621,13 @@ echo "# Analizing versions..." ; sleep 5
 
 if [[ $lemonade == *'.jar'* ]]; then
 echo -e User has been caught using Lemonade Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $HuzuniVIP == *'.jar'* ]]; then
 echo -e User has been caught using Huzuni VIP 3.5 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 
 # ========================== Versions paste =======================================
@@ -498,238 +699,393 @@ GRaven3=$(cd ~/.minecraft/mods/ && ls -ls | grep 212848)
 
 if [[ $GExplicitB9Check == *'476303'* ]]; then
 echo -e User has been caught using Explicit \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GFenixCheck == *'945117'* ]]; then
 echo -e User has been caught using Fenix \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GGhostSenseCheck == *'232737'* ]]; then
 echo -e User has been caught using Ghost Sense \(Check A\) >> $tmp 
+echo "
+" >> $tmp
 fi
 if [[ $GNebulaCheck == *'705585'* ]]; then
 echo -e User has been caught using Nebula God Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GBapeCheck == '*1489573'* ]]; then
 echo -e User has been caught using Bape or Cracked vape \(Check A\)
+echo "
+" >> $tmp
 fi
 if [[ $GTimeChangerCheck1 == *'29284'* ]]; then
 echo -e User has been caught using TimeChanger client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GTimeChangerCheck2 == *'14548'* ]]; then
 echo -e User has been caught using TimeChanger client \(Check B\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRavenB2Check1 == *'118223'* ]]; then
 echo -e User has been caught using Raven B2 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRavenB2Check2 == *'116'* ]]; then
 echo -e User has been caught using Raven B2 \(Check B\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRavenB1Check == *'54620'* ]]; then
 echo -e User has been caught using Raven B1 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GGucciClientCheck == *'55628'* ]]; then
 echo -e User has been caught using Gucci Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GSumoClientCheck == *'149553'* ]]; then
 echo -e User has been caught using Gucci Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GIncognitoCheck == *'8674753'* ]]; then
 echo -e User has been caught using Incognito Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GLowkeyCheck == *'770390'* ]]; then
 echo -e User has been caught using Incognito Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GOnycCheck == *'149594'* ]]; then
 echo -e User has been caught using Onyx Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GSakeCheck == *'588131'* ]]; then
+echo "
+" >> $tmp
 echo -e User has been caught using Sake Client \(Check A\) >> $tmp
 fi
 if [[ $GSkilledCheck == *'251173'* ]];then
+echo "
+" >> $tmp
 echo -e User has been caught using Skilled B2 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GSkilledB1Check == *'239784'* ]]; then
 echo -e User has been caught using Skilled B1 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GReachModCheck == *"4631"* ]]; then
 echo -e User has been caught using a reach mod \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GReachModCheck2 == *'5996'* ]]; then
 echo -e User has been caught using a reach mod \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GAzuryaCheck == *'69653'* ]]; then
 echo -e User has been caught using Azurya Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRemoveHitDelay == *'7179'* ]]; then
 echo -e User has been caught using a mod that removes the 1.8.9 hit delay. >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GButterflyMod == *'3785'* ]]; then
 echo -e User has been caught using a mod that simulates butterfly clicks \(BANNABLE\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GGhostClient == *'236695'* ]]; then
 echo -e User has been caught using a generic Ghost Client \( Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GLiquidBounce == *'7245326'* ]]; then
 echo -e User is using LiquidBounce \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GSativaCheck == *'951771'* ]]; then
 echo -e User has been caught using Sativa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GUboaCheck == *'221595'* ]]; then
 echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GVeneCheck == *'291968'* ]]; then
 echo -e User has been caught using Vene Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GWillyCheck == *'3461783'* ]]; then
 echo -e User has been caught using Willy Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GSkilledV3 == *'896670'* ]]; then
 echo -e User has been caught using Skilled Client V3 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRavenV2 == *'210532'* ]]; then
 echo -e User has been caught using Raven Client V2 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GFDPClient == *'15173506'* ]]; then
 echo -e User has been caught using FDP Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GCheckDeletedFile == *'deleted'* ]]; then
 echo -e User has been flagged for Generic internal file deletion \(Check B\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRmodule == *'Reach'* ]]; then
 echo -e User has been flagged for Generic Reach module \(Check C\)  >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GVmodule == *'Velocity'* ]]; then
 echo -e User has been flagged for Generic Velocity module \(Check C\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRaven3 == *'212848'* ]]; then
 echo -e User has been caught using Raven Client V3 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GExplicitB9Check == *'476303'* ]]; then
 echo -e User has been caught using Explicit \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GFenixCheck == *'945117'* ]]; then
 echo -e User has been caught using Fenix \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GGhostSenseCheck == *'232737'* ]]; then
 echo -e User has been caught using Ghost Sense \(Check A\) >> $tmp 
+echo "
+" >> $tmp
 fi
 if [[ $GNebulaCheck == *'705585'* ]]; then
 echo -e User has been caught using Nebula God Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GBapeCheck == '*1489573'* ]]; then
 echo -e User has been caught using Bape or Cracked vape \(Check A\)
+echo "
+" >> $tmp
 fi
 if [[ $GTimeChangerCheck1 == *'29284'* ]]; then
 echo -e User has been caught using TimeChanger client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GTimeChangerCheck2 == *'14548'* ]]; then
 echo -e User has been caught using TimeChanger client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRavenB2Check1 == *'118223'* ]]; then
 echo -e User has been caught using Raven B2 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRavenB2Check2 == *'116'* ]]; then
 echo -e User has been caught using Raven B2 \(Check B\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRavenB1Check == *'54620'* ]]; then
 echo -e User has been caught using Raven B1 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GGucciClientCheck == *'55628'* ]]; then
 echo -e User has been caught using Gucci Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GSumoClientCheck == *'149553'* ]]; then
 echo -e User has been caught using Gucci Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GIncognitoCheck == *'8674753'* ]]; then
 echo -e User has been caught using Incognito Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GLowkeyCheck == *'770390'* ]]; then
 echo -e User has been caught using Incognito Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GOnycCheck == *'149594'* ]]; then
 echo -e User has been caught using Onyx Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GSakeCheck == *'588131'* ]]; then
 echo -e User has been caught using Sake Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GSkilledCheck == *'251173'* ]];then
 echo -e User has been caught using Skilled B2 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GSkilledB1Check == *'239784'* ]]; then
 echo -e User has been caught using Skilled B1 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GReachModCheck == *"4631"* ]]; then
 echo -e User has been caught using a reach mod \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GReachModCheck2 == *'5996'* ]]; then
 echo -e User has been caught using a reach mod \(Check B\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GAzuryaCheck == *'69653'* ]]; then
 echo -e User has been caught using Azurya Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRemoveHitDelay == *'7179'* ]]; then
 echo -e User has been caught using a mod that removes the 1.8.9 hit delay. >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GButterflyMod == *'3785'* ]]; then
 echo -e User has been caught using a mod that simulates butterfly clicks \(BANNABLE\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GGhostClient == *'236695'* ]]; then
 echo -e User has been caught using a generic Ghost Client \( Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GLiquidBounce == *'7245326'* ]]; then
 echo -e User is using LiquidBounce \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GSativaCheck == *'951771'* ]]; then
 echo -e User has been caught using Sativa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GUboaCheck == *'221595'* ]]; then
 echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GVeneCheck == *'291968'* ]]; then
 echo -e User has been caught using Vene Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GWillyCheck == *'3461783'* ]]; then
 echo -e User has been caught using Willy Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GSkilledV3 == *'896670'* ]]; then
 echo -e User has been caught using Skilled Client V3 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRavenV2 == *'210532'* ]]; then
 echo -e User has been caught using Raven Client V2 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GFDPClient == *'15173506'* ]]; then
 echo -e User has been caught using FDP Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GCheckDeletedFile == *'deleted'* ]]; then
 echo -e "User has been flagged for Generic internal file deletion (MOD) (Check B)" >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GCheckDeletedFile2 == *'deleted'* ]]; then
 echo -e "User has been flagged for Generic internal file deletion (Resource Pack) (Check B)" >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRmodule == *'Reach'* ]]; then
 echo -e User has been flagged for Generic Reach module \(Check C\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GVmodule == *'Velocity'* ]]; then
 echo -e User has been flagged for Generic Velocity module \(Check C\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GVape325 == *'1485973'* ]]; then
 echo -e User has been caught using Vape 3.25 Cracked \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRavenPlusEXP == *'2952819'* ]]; then
 echo -e User has been caught using Raven b+ [experimental client] \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRavenPlus == *'2878145'* ]]; then
 echo -e User has been caught using Raven b+ Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRavenPlus2 == *'2878001'* ]]; then
 echo -e User has been caught using Raven b+ Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 if [[ $GRaven3 == *'212848'* ]]; then
 echo -e User has been caught using Raven Client V3 \(Check A\) >> $tmp
+echo "
+" >> $tmp
 fi
 
 # ========================== mods general paste =======================================
-
 nashe=$($tmp)
 echo "98"
 echo "# Writing results..." ; sleep 2
@@ -771,7 +1127,7 @@ clear
 echo -e "
 ============== NordVPN Detection ============== 
 " >> $tmp
-nordvpn status | tr '\n' ' ' >> $tmp
+nordvpn status | tr '\n' ' ' | grep Status: >> $tmp
 echo -e "
 " >> $tmp
 clear
@@ -783,14 +1139,18 @@ echo -e "
 " >> $tmp
 
 echo -e "
-============== Porn Detection ============== 
+============== Hardware ID ============== 
 " >> $tmp
-journalctl -u systemd-resolved | grep porn | awk '{print $9}' >> $tmp
+echo -e Mac Address: && ifconfig -a | grep ether | awk '{print $2}' >> $tmp
+echo -e HWID: && cat /etc/machine-id | tr '\n' ' ' >> $tmp
 echo -e "
 " >> $tmp
+#Remove the Hashtag, create a webhook and replace "webhook" w the real one. [I recomend obfuscate the bash file first to prevent things...]
+##curl -H "Accept: application/json" -H "Content-Type:multipart/form-data" -X POST -F "file=@$tmp" -F "payload_json={\"content\":\"$USER Scan (linux)\"}" webhook link
 clear
 echo "# Successfully scanned!" ; sleep 2
 echo "100"
+zenity --text-info --filename=$tmp
 ) |
 zenity --progress \
   --title="Scanning..." \
@@ -801,7 +1161,6 @@ zenity --progress \
 
 (( $? != 0 )) && zenity --error --text="Error in zenity command."
 
-zenity --info --window-icon=info --title="Scan completed!" --text="Check /tmp/$tmp file to analyze the results."
 } &> /dev/null
 echo -e Scan completed!
 nautilus /tmp/
