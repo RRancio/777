@@ -41,6 +41,6 @@ Starting...
 This is developed by our community based and focused on Screenshare, in case you have any problem with the tool, you can contact me by discord.
 
 ```
-Community discord: ![Screenshare Community](https://discord.gg/screenshare)
+Community discord: https://discord.gg/screenshare
 Developer Discord: out#0001
 ```
