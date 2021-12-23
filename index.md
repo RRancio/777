@@ -1,37 +1,44 @@
-## Welcome to GitHub Pages
+## 777 Linux cheaters problem
 
-You can use the [editor on GitHub](https://github.com/Rancio777/Linux-Minecraft-Screenshare-Tool/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+777 is an automatic screenshare tool for GNU/Linux operating systems.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Features
 
-### Markdown
+1) Generic checks such as Autoclickers, Macro Switcher and others
+2) Deleted in minecraft instance files
+3) Recycle bin (Trash) modification date
+4) Mods / Versions / Files Scanner
+5) Hardware ID extractor
+6) File randomizer to prevent alterations
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Easy to use!
+
+This tool is made in bash and does not need super user based permissions to operate correctly, being in bash, no separate program will be needed.
 
 ```markdown
-Syntax highlighted code block
+Bash design
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+    ___________________________
+    \______  \______  \______  \
+        /    /   /    /   /    /
+       /    /   /    /   /    /
+      /____/   /____/   /____/
 
-1. Numbered
-2. List
+       Linux Screenshare tool
+ Performed by discord.gg/screenshare
 
-**Bold** and _Italic_ and `Code` text
+          ZorinOS Detected
 
-[Link](url) and ![Image](src)
+Starting...
+
+![imagen](https://user-images.githubusercontent.com/80014347/147298630-296f3025-3ec2-45ff-b621-479fe4f14c8c.png)
+
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### Support
 
-### Jekyll Themes
+This is developed by our community based and focused on Screenshare, in case you have any problem with the tool, you can contact me by discord.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Rancio777/Linux-Minecraft-Screenshare-Tool/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Community discord: ![Screenshare Community](https://discord.gg/screenshare)
+Developer Discord: out#0001
