@@ -75,6 +75,9 @@ RavenPlus=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 2878145)
 RavenPlus2=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 2878001)
 GhostSense=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 232737)
 Raven3=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 212848)
+uboa=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 221595)
+lowkey=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 280874)
+sake=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 588131)
 
 # ======================= mods 1.8.9 ==============================
 
@@ -285,6 +288,21 @@ echo -e User has been caught using Raven Client V3 \(Check A\) >> $tmp
 echo "
 " >> $tmp
 fi
+if [[ $uboa == *'221595'* ]]; then
+echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $sake == *'588131'* ]]; then
+echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $lowkey == *'280874'* ]]; then
+echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
 
 # =================== txt paste ===========================
 
@@ -331,6 +349,9 @@ FDPClient7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 15173506)
 Rmodule7=$(cd ~/.minecraft/mods/1.7.10 && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Reach)
 Vmodule7=$(cd ~/.minecraft/mods/1.7.10 && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Velocity)
 Raven37=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 212848)
+trump7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 2304240)
+onik7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 149594)
+cyanide7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 161658)
 
 # ===================== mods 1.7.10 ========================
 
@@ -511,7 +532,21 @@ echo -e User has been flagged for Generic Velocity module \(Check C\) >> $tmp
 echo "
 " >> $tmp
 fi
-
+if [[ $cyanide7 == *'161658'* ]]; then
+echo -e User has been flagged for Cyanide ghost client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $trump7 == *'2304240'* ]]; then
+echo -e User has been flagged for Trump ghost client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $onik7 == *'149594'* ]]; then
+echo -e User has been flagged for Onik ghost client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
 # ===================== mods paste =========================
 
 echo "78"
@@ -692,6 +727,12 @@ GRavenPlusEXP=$(cd ~/.minecraft/mods/ && ls -ls | grep 2952819)
 GRavenPlus=$(cd ~/.minecraft/mods/ && ls -ls | grep 2878145)
 GRavenPlus2=$(cd ~/.minecraft/mods/ && ls -ls | grep 2878001)
 GRaven3=$(cd ~/.minecraft/mods/ && ls -ls | grep 212848)
+Guboa=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 221595)
+Glowkey=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 280874)
+Gsake=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 588131)
+Gcyanide=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 161658)
+Gonik=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 149594)
+Gtrump=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 2304240)
 
 # ========================== mods general =======================================
 
@@ -738,7 +779,7 @@ echo "
 " >> $tmp
 fi
 if [[ $GRavenB2Check2 == *'116'* ]]; then
-echo -e User has been caught using Raven B2 \(Check B\) >> $tmp
+echo -e User has been caught using Raven B2 \(Check A\) >> $tmp
 echo "
 " >> $tmp
 fi
@@ -1084,6 +1125,37 @@ echo -e User has been caught using Raven Client V3 \(Check A\) >> $tmp
 echo "
 " >> $tmp
 fi
+if [[ $Guboa == *'221595'* ]]; then
+echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $Gsake == *'588131'* ]]; then
+echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $Glowkey == *'280874'* ]]; then
+echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $Gcyanide == *'161658'* ]]; then
+echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $Gonik == *'149594'* ]]; then
+echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $Gtrump == *'2304240'* ]]; then
+echo -e User has been caught using Uboa Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+
 
 # ========================== mods general paste =======================================
 nashe=$($tmp)
