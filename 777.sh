@@ -1,16 +1,17 @@
 #! /bin/bash
 # This idea was taken from https://github.com/QV-dev/TuxTool, all credits to him.
 OS=$(cat /etc/issue | awk '{ print $1 $2 }')
+US=$(cat ~/.minecraft/usernamecache.json | awk '{print $2}' | tr '"' '\n' | tr '\n' ' ')
 echo "
     ___________________________ 
     \______  \______  \______  \\
         /    /   /    /   /    /
-       /    /   /    /   /    / 
+       /    /   /    /   /    / 	
       /____/   /____/   /____/  
                             
        Linux Screenshare tool
  Performed by discord.gg/screenshare 🎄
-          
+       Currently scanning:$US
           $OS Detected
 "
 echo Starting...
@@ -79,6 +80,8 @@ uboa=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 221595)
 lowkey=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 280874)
 sake=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 588131)
 Vea=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 38790)
+Sumo=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 155754)
+Crystal=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 296751)
 
 # ======================= mods 1.8.9 ==============================
 
@@ -306,6 +309,16 @@ echo "
 fi
 if [[ $Vea == *'38790'* ]]; then
 echo -e User has been caught using Vea Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi 
+if [[ $Sumo == *'155754'* ]]; then
+echo -e User has been caught using Sumo Ghost Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $Crystal == *'296751'* ]]; then
+echo -e User has been caught using Crystal Ghost Client \(Check A\) >> $tmp
 echo "
 " >> $tmp
 fi 
@@ -739,13 +752,15 @@ GRavenPlusEXP=$(cd ~/.minecraft/mods/ && ls -ls | grep 2952819)
 GRavenPlus=$(cd ~/.minecraft/mods/ && ls -ls | grep 2878145)
 GRavenPlus2=$(cd ~/.minecraft/mods/ && ls -ls | grep 2878001)
 GRaven3=$(cd ~/.minecraft/mods/ && ls -ls | grep 212848)
-Guboa=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 221595)
-Glowkey=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 280874)
-Gsake=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 588131)
-Gcyanide=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 161658)
-Gonik=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 149594)
-Gtrump=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 2304240)
-GVea=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 38790)
+Guboa=$(cd ~/.minecraft/mods/ && ls -ls | grep 221595)
+Glowkey=$(cd ~/.minecraft/mods/ && ls -ls | grep 280874)
+Gsake=$(cd ~/.minecraft/mods/ && ls -ls | grep 588131)
+Gcyanide=$(cd ~/.minecraft/mods/ && ls -ls | grep 161658)
+Gonik=$(cd ~/.minecraft/mods/ && ls -ls | grep 149594)
+Gtrump=$(cd ~/.minecraft/mods/ && ls -ls | grep 2304240)
+GVea=$(cd ~/.minecraft/mods/ && ls -ls | grep 38790)
+GSumo=$(cd ~/.minecraft/mods/ && ls -ls | grep 155754)
+GCrystal=$(cd ~/.minecraft/mods/ && ls -ls | grep 296751) 
 
 # ========================== mods general =======================================
 
@@ -1173,7 +1188,16 @@ echo -e User has been caught using Vea Client \(Check A\) >> $tmp
 echo "
 " >> $tmp
 fi
-
+if [[ $GSumo == *'155754'* ]]; then
+echo -e User has been caught using Sumo Ghost Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $GCrystal == *'296751'* ]]; then
+echo -e User has been caught using Crystal Ghost Client \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi 
 # ========================== mods general paste =======================================
 nashe=$($tmp)
 echo "98"
@@ -1226,7 +1250,12 @@ echo -e "
 who -H >> $tmp
 echo -e "
 " >> $tmp
-
+echo -e "
+============== Posible alts  ============== 
+" >> $tmp
+cat ~/.minecraft/launcher_accounts.json | grep name | awk '{print $3}' |  tr '"' ' ' | tr ',' ' ' >> $tmp
+echo -e "
+" >> $tmp
 echo -e "
 ============== Hardware ID ============== 
 " >> $tmp
@@ -1253,5 +1282,4 @@ zenity --progress \
 } &> /dev/null
 echo -e Scan completed!
 nautilus /tmp/
-
 
