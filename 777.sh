@@ -1272,7 +1272,7 @@ zenity --text-info --filename=$tmp
 ) |
 zenity --progress \
   --title="Scanning..." \
-  --text="First Task." \
+  --text="Starting..." \
   --percentage=0 \
   --auto-close \
   --auto-kill
@@ -1281,5 +1281,10 @@ zenity --progress \
 
 } &> /dev/null
 echo -e Scan completed!
+ArchiveManager=$(xdg-mime query default inode/directory | grep nautilus)
+if [[ $ArchiveMAnager == *'nautilus'* ]]; then
 nautilus /tmp/
-
+else
+dolphin /tmp/
+fi
+exit
