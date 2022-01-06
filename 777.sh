@@ -595,6 +595,9 @@ GenericRecorder2=$(ps -aux | grep simplescreenrecorder --logfile)
 OBS=$(ps -aux | grep /snap/obs-studio/1284/usr/bin/obs)
 Kazam=$(ps -aux | grep "kazam")
 Kazam2=$(wmctrl -l | awk '{print $4 $5}' | grep Kazam)
+Trash=$(stat -c ‘%y’ ~/.local/share/Trash/)
+VersionsF=$(stat -c ‘%y’ ~/.minecraft/versions/)
+ModsF=$(stat -c ‘%y’ ~/.minecraft/mods/)
 # ========================== general =======================================
 
 # ========================== general paste =======================================
@@ -1224,9 +1227,11 @@ echo -e "
 " >> $tmp
 clear
 echo -e "
-============== Recycle Bin latest modification ==============
+============== Important folders modification date: ==============
 " >> $tmp
-ls -lt ~/.local/share/Trash/ | awk '{print $9} {print $8}' | tr '\n' ' ' >> $tmp
+echo "Recycle Bin: $Trash" >> $tmp
+echo "Mods Folder $ModsF" >> $tmp
+echo "Versions folder: $VersionsF" >> $tmp
 echo -e "
 " >> $tmp
 clear
