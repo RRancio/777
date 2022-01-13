@@ -577,6 +577,37 @@ fi
 echo "78"
 echo "# Analizing files..." ; sleep 2
 
+
+# ===================== Resource Packs ========================
+
+xRay=$(cd ~/.minecraft/resourcepacks && ls -ls | grep 27723290)
+xRay2=$(cd ~/.minecraft/resourcepacks && ls -ls | grep 510608)
+xRay3=$(cd ~/.minecraft/resourcepacks && ls -ls | grep 26671)
+xRay4G=$(find -name X-Ray* | grep .zip && find -name Xray* | grep .zip && find -name xray* | grep .zip)
+
+# ===================== Resource Packs paste =========================
+
+if [[ $xRay == *'27723290'* ]]; then
+echo -e User has been caught using generic xRay texture pack \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $xRay2 == *'510608'* ]]; then
+echo -e User has been caught using generic xRay texture pack \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $xRay3 == *'26671'* ]]; then
+echo -e User has been caught using generic xRay texture pack \(Check A\) >> $tmp
+echo "
+" >> $tmp
+fi
+if [[ $xRay4G == *'.zip'* ]]; then
+echo -e User has been caught generic file xRay texture pack \(Check D\) >> $tmp
+echo "
+" >> $tmp
+fi    
+
 # ========================== general =======================================
 
 CheckDeletedFile=$(lsof -p $java | grep mods | grep deleted)
@@ -597,7 +628,7 @@ Kazam=$(ps -aux | grep "kazam")
 Kazam2=$(wmctrl -l | awk '{print $4 $5}' | grep Kazam)
 Trash=$(stat -c ‘%y’ ~/.local/share/Trash/)
 VersionsF=$(stat -c ‘%y’ ~/.minecraft/versions/)
-ModsF=$(stat -c ‘%y’ ~/.minecraft/mods/)
+ModsF=$(stat -c ‘%y’ ~/.minecraft/mods/ && stat -c ‘%y’ ~/.minecraft/mods/1.8.9 && stat -c ‘%y’ ~/.minecraft/mods/1.7.10)
 # ========================== general =======================================
 
 # ========================== general paste =======================================
@@ -1293,3 +1324,4 @@ else
 dolphin /tmp/
 fi
 exit
+
