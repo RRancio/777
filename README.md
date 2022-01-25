@@ -19,7 +19,9 @@ bash 777.sh
 
 ## Example
 
-https://user-images.githubusercontent.com/80014347/146951197-db1275a0-6c7a-4310-ba16-0ffe298f0b87.mp4
+
+https://user-images.githubusercontent.com/80014347/151059194-e673d548-255f-4041-ae33-0111e13702dc.mp4
+
 
 ## Creator
 
@@ -27,6 +29,3 @@ https://user-images.githubusercontent.com/80014347/146951197-db1275a0-6c7a-4310-
 - YouTube: [NotRancio](https://youtube.com/c/NotRancio)
 - Public Discord: [@Screenshare Community](https://discord.gg/screenshare)
 - Discord: out#0001
-
-
-
