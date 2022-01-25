@@ -10,9 +10,9 @@ echo "
       /____/   /____/   /____/  
                             
        Linux Screenshare tool
- Performed by discord.gg/screenshare 🎄
+ Performed by discord.gg/screenshare 🔍
        Currently scanning:$US
-          $OS Detected
+           $OS Detected
 "
 echo Starting...
 sleep 4
@@ -21,21 +21,24 @@ sleep 1 && wmctrl -r "Progress Status" -b add,above &
 (
 clear
 dir=$(pwd)
-nordvpn status
 clear
 RR=$($RANDOM)
 tmp=$(mktemp -u -t $RR'777-XXXXXXXXXX.scan.txt')
 tmpname=$($tmp)
-echo "=================== Detections =================
+echo "
+Detections
+-------------------------------------------
 " >> $tmp
 java=$(pidof "java")
-echo "10"
+echo "5"
 echo "# Analizing mods..." ; sleep 5
 # ======================= mods 1.8.9 ==============================
 
 ExplicitB9Check=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 476303)
 FenixCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 945117)
 GhostSenseCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 232737)
+echo "10"
+echo "# Analizing mods..." ; sleep 1
 NebulaCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 705585)
 BapeCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 1489573)
 TimeChangerCheck1=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 29284)
@@ -45,9 +48,9 @@ RavenB2Check2=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 116)
 RavenB1Check=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 54620)
 GucciClientCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 55628)
 SumoClientCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 149553)
-echo "40"
-echo "# Analizing mods..." ; sleep 5
 IncognitoCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 8674753)
+echo "20"
+echo "# Analizing mods..." ; sleep 1
 LowkeyCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 770390)
 OnycCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 149594)
 SakeCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 588131)
@@ -58,6 +61,8 @@ ReachModCheck2=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 5996)
 AzuryaCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 69653)
 RemoveHitDelay=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 7179)
 ButterflyMod=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 3785)
+echo "30"
+echo "# Analizing mods..." ; sleep 1
 GhostClient=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 236695)
 LiquidBounce=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 7245326)
 SativaCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 951771)
@@ -67,6 +72,8 @@ WillyCheck=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 3461783)
 SkilledV3=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 896670)
 RavenV2=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 210532)
 SkilledV3=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 896670)
+echo "40"
+echo "# Analizing mods..." ; sleep 1
 FDPClient=$(cd ~/.minecraft/mods/1.8.9 && ls -ls | grep 15173506)
 Rmodule=$(cd ~/.minecraft/mods/1.8.9 && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Reach)
 Vmodule=$(cd ~/.minecraft/mods/1.8.9 && find . -name \*.jar -exec sh -c 'printf "\n\nFile: {}"; jar tf {}' ";" | grep Velocity)
@@ -326,7 +333,7 @@ fi
 # =================== txt paste ===========================
 
 echo "50"
-echo "# Analizing mods..." ; sleep 5 
+echo "# Analizing mods..." ; sleep 1 
 
 # ===================== mods 1.7.10 ========================
 
@@ -346,7 +353,7 @@ IncognitoCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 8674753)
 LowkeyCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 770390)
 OnycCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 149594)
 echo "60"
-echo "# Analizing mods..." ; sleep 5
+echo "# Analizing mods..." ; sleep 1
 SakeCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 588131)
 SkilledCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 251173)
 SkilledB1Check7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 239784)
@@ -358,6 +365,8 @@ ButterflyMod7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 3785)
 GhostClient7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 236695)
 LiquidBounce7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 7245326)
 SativaCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 951771)
+echo "70"
+echo "# Analizing mods..." ; sleep 1
 UboaCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 221595)
 VeneCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 291968)
 WillyCheck7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 3461783)
@@ -370,6 +379,8 @@ Vmodule7=$(cd ~/.minecraft/mods/1.7.10 && find . -name \*.jar -exec sh -c 'print
 Raven37=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 212848)
 trump7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 2304240)
 onik7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 149594)
+echo "80"
+echo "# Analizing mods..." ; sleep 1
 cyanide7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 161658)
 Vea7=$(cd ~/.minecraft/mods/1.7.10 && ls -ls | grep 38790)
 
@@ -574,8 +585,8 @@ echo "
 fi 
 # ===================== mods paste =========================
 
-echo "78"
-echo "# Analizing files..." ; sleep 2
+echo "85"
+echo "# Analizing files..." ; sleep 1
 
 
 # ===================== Resource Packs ========================
@@ -708,8 +719,8 @@ HuzuniVIP=$(cd ~/.minecraft/versions && find -size 9036441c | grep jar)
 
 # ========================== Versions =======================================
 
-echo "70"
-echo "# Analizing versions..." ; sleep 5
+echo "90"
+echo "# Analizing versions..." ; sleep 1
 
 # ========================== Versions paste =======================================
 
@@ -729,6 +740,8 @@ fi
 # ========================== mods general =======================================
 
 GSakeCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 588131)
+echo "95"
+echo "# Analizing mods..." ; sleep 1
 GSkilledCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 251173)
 GSkilledB1Check=$(cd ~/.minecraft/mods/ && ls -ls | grep 239784)
 GReachModCheck=$(cd ~/.minecraft/mods/ && ls -ls | grep 4631)
@@ -1235,30 +1248,36 @@ fi
 # ========================== mods general paste =======================================
 nashe=$($tmp)
 echo "98"
-echo "# Writing results..." ; sleep 2
+echo "# Writing results..." ; sleep 3
 clear
-echo -e "============== Deleted in instance files ==============
+echo -e " 
+Deleted in instance files
+-------------------------------------------
 " >> $tmp
 echo -e Deleted mods found: && lsof -p $java | grep mods | grep deleted | awk '{print $9} {print $10} {print $11}' | tr '\n' ' ' >> $tmp
 echo -e Deleted resourceracks found: && lsof -p $java | grep resourcepack | grep deleted | awk '{print $10} {print $11}' | tr '\n' ' ' >> $tmp
 echo -e "
 " >> $tmp
 echo -e "
-============== Check explanation below! ==============
+Check explanation below!
+-------------------------------------------
 
 Check A: Ilegal version/mod was found on minecraft folder
 Check B: Ilegal modification in minecraft instance
 Check C: unsecure check
 Check D: Ilegal executable/log was found on the pc 
 " >> $tmp
-echo -e "============== Minecraft instance time ============== 
+echo -e " 
+Minecraft instance time
+------------------------------------------- 
 " >> $tmp
 ps -p $java -o etime | tr '\n' ' ' >> $tmp
 echo -e "
 " >> $tmp
 clear
 echo -e "
-============== Important folders modification date: ==============
+Important folders modification date
+-------------------------------------------
 " >> $tmp
 echo "Recycle Bin: $Trash" >> $tmp
 echo "Mods Folder $ModsF" >> $tmp
@@ -1267,33 +1286,39 @@ echo -e "
 " >> $tmp
 clear
 echo -e "
-============== VPN Detection ============== 
+VPN Detection
+------------------------------------------- 
 " >> $tmp
 nmcli con show --active | awk '{print $1}' | grep -i vpn >> $tmp
 echo -e "
 " >> $tmp
 clear
 echo -e "
-============== NordVPN Detection ============== 
+NordVPN Detection
+------------------------------------------- 
 " >> $tmp
 nordvpn status | tr '\n' ' ' | grep Status: >> $tmp
 echo -e "
 " >> $tmp
 clear
 echo -e "
-============== Active users  ============== 
+Active users
+-------------------------------------------
 " >> $tmp
 who -H >> $tmp
+echo -e Two same names are not double users! >> $tmp
 echo -e "
 " >> $tmp
 echo -e "
-============== Posible alts  ============== 
+Posible alts 
+-------------------------------------------
 " >> $tmp
 cat ~/.minecraft/launcher_accounts.json | grep name | awk '{print $3}' |  tr '"' ' ' | tr ',' ' ' >> $tmp
 echo -e "
 " >> $tmp
 echo -e "
-============== Hardware ID ============== 
+Hardware ID
+------------------------------------------- 
 " >> $tmp
 echo -e Mac Address: && ifconfig -a | grep ether | awk '{print $2}' >> $tmp
 echo -e HWID: && cat /etc/machine-id | tr '\n' ' ' >> $tmp
@@ -1317,11 +1342,4 @@ zenity --progress \
 
 } &> /dev/null
 echo -e Scan completed!
-ArchiveManager=$(xdg-mime query default inode/directory | grep nautilus)
-if [[ $ArchiveMAnager == *'nautilus'* ]]; then
-nautilus /tmp/
-else
-dolphin /tmp/
-fi
 exit
-
