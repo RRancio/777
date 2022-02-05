@@ -2,7 +2,10 @@
 # This idea was taken from https://github.com/QV-dev/TuxTool, all credits to him.
 OS=$(cat /etc/issue | awk '{ print $1 $2 }')
 US=$(cat ~/.minecraft/usernamecache.json | awk '{print $2}' | tr '"' '\n' | tr '\n' ' ')
+java=$(pidof "java") &> /dev/null
+JavaAT=$(ps -p $java -o etime | tr '\n' ' ' | awk '{print $2}') &> /dev/null
 echo "
+___________________________________________
     ___________________________ 
     \______  \______  \______  \\
         /    /   /    /   /    /
@@ -11,11 +14,17 @@ echo "
                             
        Linux Screenshare tool
  Performed by discord.gg/screenshare 🔍
-       Currently scanning:$US
-           $OS Detected
+__________________________________________
+
+- Currently scanning:$US
+- $OS Detected
+- $XDG_CURRENT_DESKTOP Desktop environment
+- Minecraft elapsed time: $JavaAT
+__________________________________________
+
+Scanning...
 "
-echo Starting...
-sleep 4
+sleep 2
 sleep 1 && wmctrl -r "Progress Status" -b add,above &
 {
 (
@@ -29,7 +38,6 @@ echo "
 Detections
 -------------------------------------------
 " >> $tmp
-java=$(pidof "java")
 echo "5"
 echo "# Analizing mods..." ; sleep 5
 # ======================= mods 1.8.9 ==============================
@@ -1343,3 +1351,4 @@ zenity --progress \
 } &> /dev/null
 echo -e Scan completed!
 exit
+
