@@ -1,5 +1,3 @@
-#! /bin/bash
-# This idea was taken from https://github.com/QV-dev/TuxTool, all credits to him.
 OS=$(cat /etc/issue | awk '{ print $1 $2 }') &> /dev/null
 US=$(cat ~/.minecraft/usernamecache.json | awk '{print $2}' | tr '"' '\n' | tr '\n' ' ') &> /dev/null
 java=$(pidof "java") &> /dev/null
