@@ -1,10 +1,6 @@
 # Linux-Minecraft-Screenshare-Tool
 Advanced minecraft Mod scanner, deleted files in instance, recycle bin modification and more!
 
-This is not my idea, i just recode an old linux screenshare tool that is uncompatible on newest linux versions.
-special thanks to https://github.com/QV-dev/TuxTool, all credits to him!
-
-
 ## How to use?
 
 Extract the file in your desktop and make it an safe executable file.
