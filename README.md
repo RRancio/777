@@ -5,7 +5,7 @@ Minecraft screenshare tool for linux, whit memory dumping and string filtering. 
 
 Extract the file in your desktop and make it an safe executable file.
 
-(![imagen](https://user-images.githubusercontent.com/80014347/156898952-c35deaea-67a2-4d0d-a8b9-1a2a26580daa.png)
+![imagen](https://user-images.githubusercontent.com/80014347/156898952-c35deaea-67a2-4d0d-a8b9-1a2a26580daa.png)
 
 - Open your terminal in desktop and execute 
 
