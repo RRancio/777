@@ -644,8 +644,6 @@ Kazam2=$(wmctrl -l | awk '{print $4 $5}' | grep Kazam)
 Trash=$(stat -c ‘%y’ ~/.local/share/Trash/)
 VersionsF=$(stat -c ‘%y’ ~/.minecraft/versions/)
 ModsF=$(stat -c ‘%y’ ~/.minecraft/mods/ && stat -c ‘%y’ ~/.minecraft/mods/1.8.9 && stat -c ‘%y’ ~/.minecraft/mods/1.7.10)
-CS=$(stat -c '%Y' /dev/null)
-CH=$(stat -c '%Y' ~/.bash_history)
 # ========================== general =======================================
 
 # ========================== general paste =======================================
@@ -715,11 +713,6 @@ echo -e User has been flagged for Generic Autoclicker [Generic name] \(Check C\)
 echo "
 " >> /tmp/Externals.txt
 fi    
-if [[ $CH > $CS ]]; then
-echo -e User has cleared command history [Bash_history] >> /tmp/Externals.txt
-echo "
-" >> /tmp/Externals.txt
-fi
 
 # ========================== general paste =======================================
 
