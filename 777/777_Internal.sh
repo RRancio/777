@@ -1,6 +1,15 @@
+gnome=$(pidof gnome-shell)
+xfce=$(pidof xfdesktop)
+mate=$(pidof caja)
+deepin=$(pidof dde-desktop)
+INPUT=/tmp/menu.sh.$$
+OUTPUT=/tmp/output.sh.$$
+vi_editor=${EDITOR-vi}
+trap "rm $OUTPUT; rm $INPUT; exit" SIGHUP SIGINT SIGTERM
 OS=$(cat /etc/issue | awk '{ print $1 $2 }') &> /dev/null
 US=$(cat ~/.minecraft/usernamecache.json | awk '{print $2}' | tr '"' '\n' | tr '\n' ' ') &> /dev/null
 java=$(pidof "java") &> /dev/null
+GNOME=$(pidof "gnome-shell") &> /dev/null
 JavaAT=$(ps -p $java -o etime | tr '\n' ' ' | awk '{print $2}') &> /dev/null
 clear && echo -e "\e[8;28;43t"
 echo "
@@ -21,11 +30,12 @@ ___________________________________________
 - Minecraft elapsed time: $JavaAT
 ___________________________________________
 
-Scanning...
+Scanning Java... 1/2
 "
 #Internal Checks Java
 chmod +x ./lsdumper
 sudo ./lsdumper $java >> /tmp/dumpJ.txt
+echo -e "\e[8;30;100t"
 ICJ=$(grep -e "raven" /tmp/dumpJ.txt)
 if [[ $ICJ == *'keystrokesmod/clickgui/raven/components/ButtonCategory'* ]]; then
 echo -e "[⚠️] User has been caugth using Raven b+ ghost client [In instance]" >> /tmp/Internals.txt
@@ -170,10 +180,93 @@ ICJ34=$(grep -e "/me/vene/skilled/modules/mods/main/" /tmp/dumpJ.txt)
 if [[ $ICJ34 == *'/me/vene/skilled/modules/mods/main/'* ]]; then
 echo -e "[⚠️] User has been caugth using skilled v3 ghost client [In instance]" >> /tmp/Internals.txt
 fi
-if [[ -f "/tmp/Internals.txt" ]]; then 
-zenity --text-info --filename=/tmp/Internals.txt
-else
-echo "Nothing found!"
+ICJ35=$(grep -e "libphantom.so" /tmp/dumpJ.txt)
+if [[ $ICJ35 == *'libphantom.so'* ]]; then
+echo -e "[⚠️] User has been caugth using Phanthom External ghost client [In instance]" >> /tmp/Internals.txt
 fi
 
+function display_output(){
+	local h=${2-10}			# box height default 10
+	local w=${1-41} 		# box width default 41
+	local t=${3-Output} 	# box title 
+	dialog --backtitle "777 Screenshare tool" --title "${t}" --clear --msgbox "$(<$OUTPUT)" ${h} ${w}
+}
+while true
+do
 
+dialog --clear --backtitle "777 Screenshare tool | discord.gg/screenshare" \
+--title "[ 7 7 7 ]" \
+--menu "You can use the UP/DOWN arrow keys.
+Choose the desktop environment 
+==> [$XDG_CURRENT_DESKTOP RECOMENDED] <== " 15 50 4 \
+GNOME "Scans GNOME environment" \
+XFCE "Scans XFCE environment" \
+MATE "Scans MATE environment" \
+Deepin "Scans DEEPIN environment" \
+Skip "Skip files scan" \
+Results "Show scan results" 2>"${INPUT}"
+
+menuitem=$(<"${INPUT}")
+
+case $menuitem in
+	GNOME) 
+	echo "Scanning GNOME Environment [Please wait...]";
+	sudo ./lsdumper $gnome | grep 'file:///home/' >> /tmp/Gnome.txt; 
+	;;
+	XFCE) 
+	echo "Scanning XFCE Environment [Please wait...]";
+	sudo ./lsdumper $xfce | grep 'file:///home/' >> /tmp/xfce.txt;
+	;;
+	MATE) 
+	echo "Scanning MATE Environment [Please wait...]";
+	sudo ./lsdumper $mate | grep 'file:///home/' >> /tmp/mate.txt;
+	;;
+	Deepin) 
+	echo "Scanning DEEPIN Environment [Please wait...]";
+	sudo ./lsdumper $deepin | grep 'file:///home/' >> /tmp/deep.txt;
+	sudo ./lsdumper $deepin | grep 'dde_file_manager::' >> /tmp/deep.txt;
+	;;
+	Skip) 
+	echo "Skipping..."; 
+	sleep 2;
+	;;
+	Results)
+	if [[ -f "/tmp/xfce.txt" ]];
+	then
+	    zenity --text-info --filename=/tmp/xfce.txt;
+	fi
+	if [[ -f "/tmp/deep.txt" ]];
+	then
+	    zenity --text-info --filename=/tmp/deep.txt;
+	fi
+	if [[ -f "/tmp/gnome.txt" ]];
+	then
+	    zenity --text-info --filename=/tmp/gnome.txt;
+	fi
+	if [[ -f "/tmp/mate.txt" ]];
+	then
+	    zenity --text-info --filename=/tmp/mate.txt;
+	fi
+	# mas ambientes para meter despues
+	if [[ -f "/tmp/Internals.txt" ]];
+	then
+	    zenity --text-info --filename=/tmp/Internals.txt;
+	else
+	    clear
+	    echo -e "\e[8;12;41t"
+	        echo """                              
+                                      
+                        oooO*         
+                      °OOOO°          
+                     *OOO*            
+           .       °OOOO°             
+           °OOOo. *OOOo               
+            .oOOOOOOO°                
+              °ooooo.                 
+    
+	    Results: Nothing found!"""
+	    sleep 5;
+	fi
+	break;;
+esac
+done
