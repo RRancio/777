@@ -25,7 +25,7 @@ Extract the entire .zip file to some folder
 ![image](https://user-images.githubusercontent.com/80014347/168665679-a8ceae7d-d940-4de4-b4cc-3d8afbd8750f.png)
 
 
-- Open your terminal in desktop and execute 
+- Open your terminal and execute 
 
 ```py
 python3 ./777.py
