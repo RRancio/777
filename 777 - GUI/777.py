@@ -1,13 +1,25 @@
+import os 
+import time
+
+tkinter = os.system('dpkg-query -l | grep python3-tk')
+if tkinter == 'Tkinter':
+    print('Tkinter is installed, skipping...')
+else:
+    print('not installed, trying to install...')
+    os.system("sudo apt-get install python3-tk")
+    os.system("clear")
+    print ('installed successfully!, Starting 777...')
+    time.sleep(3)
+    os.system("clear")
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
 from tkinter import * 
 import subprocess
-import time
 import webbrowser
 import requests
-import os
 import time
+
 # Progress bar
 def makeProgress():
 	progessBarOne['value']=progessBarOne['value'] + 1
