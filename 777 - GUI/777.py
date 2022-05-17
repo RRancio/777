@@ -1,24 +1,18 @@
 import os 
 import time
-
-tkinter = os.system('dpkg-query -l | grep python3-tk')
-if tkinter == 'Tkinter':
-    print('Tkinter is installed, skipping...')
-else:
-    print('not installed, trying to install...')
-    os.system("sudo apt-get install python3-tk")
-    os.system("clear")
-    print ('installed successfully!, Starting 777...')
-    time.sleep(3)
-    os.system("clear")
+import subprocess
+import re
+#Tkinter check
+subprocess.run(["bash ./Scripts/req.sh", "arguments"], shell=True)
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
 from tkinter import * 
-import subprocess
 import webbrowser
 import requests
 import time
+from gi.repository import Notify
+os.system("clear")
 
 # Progress bar
 def makeProgress():
@@ -28,10 +22,14 @@ def makeProgress():
 
 # Start external scan
 def Externals():
+    Notify.init("7 7 7")
+    Notify.Notification.new("1/2 - Starting external scan...").show()
     subprocess.run(["bash", "./Scripts/external.sh", "arguments"], shell=False)
     progessBarOne['value'] = 20
 # Start internal scan
 def Internal():
+    Notify.init("7 7 7")
+    Notify.Notification.new("2/2 - Starting internal scan...").show()
     subprocess.run(["sudo", "bash", "./Scripts/internal.sh", "arguments"], shell=False)
     progessBarOne['value'] = 40
 # Start internal scan
@@ -42,10 +40,16 @@ def enscan():
     root.update_idletasks()
     progessBarOne['value']=progessBarOne['value'] = 40
     time.sleep(1)
+    Notify.init("7 7 7")
+    Notify.Notification.new("1/2 - Starting external scan...").show()
     subprocess.run(["bash", "./Scripts/external.sh", "arguments"], shell=False)
     time.sleep(1)
+    Notify.init("7 7 7")
+    Notify.Notification.new("2/2 - Starting internal scan...").show()
     subprocess.run(["sudo", "bash", "./Scripts/internal.sh", "arguments"], shell=False)
     root.update_idletasks()
+    Notify.init("7 7 7")
+    Notify.Notification.new("Done").show()
     progessBarOne['value']=progessBarOne['value'] = 60
 
 
@@ -115,40 +119,20 @@ root.configure(background='#dadada')
 root.title('[ 777 ] | Linux Screenshare solutions')
 icon=PhotoImage(file="./Resources/777.png")
 root.iconphoto(True,icon)
-
 progessBarOne_style = ttk.Style()
-
 progessBarOne_style.theme_use('clam')
-
 progessBarOne_style.configure('progessBarOne.Horizontal.TProgressbar', foreground='#9370DB', background='#9370DB')
-
-
 progessBarOne=ttk.Progressbar(root, style='progessBarOne.Horizontal.TProgressbar', orient='horizontal', length=300, mode='determinate', maximum=100, value=1)
 progessBarOne.place(x=180, y=130)
-
 # Button(root, text='External Scan', bg='#F0F8FF', font=('arial', 12, 'normal'), command=Externals).place(x=180, y=155)
-
 # Button(root, text='Internal Scan', bg='#F0F8FF', font=('arial', 12, 'normal'), command=Internal).place(x=180, y=190)
-
 Label(root, text='[777]', bg='#dadada', font=('courier', 60, 'normal')).place(x=200, y=40)
-
 Button(root, text='Environment scan', bg='#F0F8FF', font=('arial', 12, 'normal'), command=env).place(x=170, y=235)
-
 Button(root, text='Scan', bg='#F0F8FF', font=('arial', 14, 'normal'), command=enscan).place(x=290, y=150)
-
 Button(root, text='Results', bg='#F0F8FF', font=('arial', 8, 'normal'), command=results).place(x=430, y=240)
-
 Button(root, text='?', bg='#F0F8FF', font=('arial', 8, 'normal'), command=info).place(x=3, y=240)
-
 worthAThousandWords= Canvas(root, height=120, width=120)
-
 picture_file = PhotoImage(file = './Resources/777.png')  
-
 worthAThousandWords.create_image(121, 1, anchor=NE, image=picture_file)
-
 worthAThousandWords.place(x=30, y=40)
-
 root.mainloop()
-
-
-
