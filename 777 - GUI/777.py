@@ -134,3 +134,4 @@ Button(root, text='Scan', bg='#3f3358', fg='#F0F8FF', font=('arial', 14, 'normal
 Button(root, text='Results', bg='#3f3358', fg='#F0F8FF', font=('arial', 8, 'normal'), command=results).place(x=430, y=240)
 Button(root, text='?', bg='#3f3358', fg='#F0F8FF', font=('arial', 8, 'normal'), command=info).place(x=3, y=240)
 worthAThousandWords= Canvas(root, height=120, width=120)
+root.mainloop()
