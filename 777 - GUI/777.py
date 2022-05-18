@@ -60,17 +60,17 @@ def info():
 # Environments scan
 def env():
     desktop = os.environ.get('DESKTOP_SESSION')
-    root = Tk()
-    root.geometry('300x100')
-    root.configure(background='#dadada')
-    root.title('[ E N V ]')
-    Label(root, text='Select environment', bg='#dadada', font=('arial', 12, 'normal')).place(x=70, y=3)
-    Label(root, text=f'Recomended: {desktop}', bg='#dadada', font=('arial', 10, 'normal')).place(x=70, y=25)
-    Button(root, text='XFCE', bg='#F0F8FF', font=('arial', 8, 'normal'), command=xfce).place(x=20, y=60)
-    Button(root, text='GNOME', bg='#F0F8FF', font=('arial', 8, 'normal'), command=gnome).place(x=80, y=60)
-    Button(root, text='MATE', bg='#F0F8FF', font=('arial', 8, 'normal'), command=mate).place(x=150, y=60)
-    Button(root, text='DEEPIN', bg='#F0F8FF', font=('arial', 8, 'normal'), command=deep).place(x=210, y=60)
-    root.mainloop()
+    env = Tk()
+    env.geometry('300x100')
+    env.configure(background="#0c0712")
+    env.title('[ E N V ]')
+    Label(env, text='Select environment', bg='#0c0712', fg='#F0F8FF', font=('arial', 12, 'normal')).place(x=70, y=3)
+    Label(env, text=f'Recomended: {desktop}', bg='#3f3358', fg='#F0F8FF', font=('arial', 10, 'normal')).place(x=70, y=25)
+    Button(env, text='XFCE', bg='#3f3358', fg='#F0F8FF', font=('arial', 8, 'normal'), command=xfce).place(x=20, y=60)
+    Button(env, text='GNOME', bg='#3f3358', fg='#F0F8FF', font=('arial', 8, 'normal'), command=gnome).place(x=80, y=60)
+    Button(env, text='MATE', bg='#3f3358', fg='#F0F8FF', font=('arial', 8, 'normal'), command=mate).place(x=150, y=60)
+    Button(env, text='DEEPIN', bg='#3f3358', fg='#F0F8FF', font=('arial', 8, 'normal'), command=deep).place(x=210, y=60)
+    env.mainloop()
 
 def xfce():
     subprocess.run(["bash", "./Scripts/xfce.sh", "arguments"], shell=False)
@@ -134,4 +134,5 @@ Button(root, text='Scan', bg='#3f3358', fg='#F0F8FF', font=('arial', 14, 'normal
 Button(root, text='Results', bg='#3f3358', fg='#F0F8FF', font=('arial', 8, 'normal'), command=results).place(x=430, y=240)
 Button(root, text='?', bg='#3f3358', fg='#F0F8FF', font=('arial', 8, 'normal'), command=info).place(x=3, y=240)
 worthAThousandWords= Canvas(root, height=120, width=120)
+
 root.mainloop()
