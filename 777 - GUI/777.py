@@ -11,7 +11,7 @@ from tkinter import *
 import webbrowser
 import requests
 import time
-from gi.repository import Notify
+from gi.repository import Notify, GdkPixbuf
 os.system("clear")
 
 # Progress bar
@@ -19,20 +19,6 @@ def makeProgress():
 	progessBarOne['value']=progessBarOne['value'] + 1
 	root.update_idletasks()
 
-
-# Start external scan
-def Externals():
-    Notify.init("7 7 7")
-    Notify.Notification.new("1/2 - Starting external scan...").show()
-    subprocess.run(["bash", "./Scripts/external.sh", "arguments"], shell=False)
-    progessBarOne['value'] = 20
-# Start internal scan
-def Internal():
-    Notify.init("7 7 7")
-    Notify.Notification.new("2/2 - Starting internal scan...").show()
-    subprocess.run(["sudo", "bash", "./Scripts/internal.sh", "arguments"], shell=False)
-    progessBarOne['value'] = 40
-# Start internal scan
 def enscan():
     root.update_idletasks()
     progessBarOne['value']=progessBarOne['value'] = 20
@@ -41,12 +27,31 @@ def enscan():
     progessBarOne['value']=progessBarOne['value'] = 40
     time.sleep(1)
     Notify.init("7 7 7")
-    Notify.Notification.new("1/2 - Starting external scan...").show()
+    notif = Notify.Notification.new("1/2 - Starting external scan...")
+    image = GdkPixbuf.Pixbuf.new_from_file("./Resources/777.png")
+    notif.set_icon_from_pixbuf(image)
+    notif.set_image_from_pixbuf(image)
+    notif.show()
+    os.system("clear")
     subprocess.run(["bash", "./Scripts/external.sh", "arguments"], shell=False)
+    os.system("clear")
     time.sleep(1)
     Notify.init("7 7 7")
-    Notify.Notification.new("2/2 - Starting internal scan...").show()
+    notif2 = Notify.Notification.new("2/2 - Starting internal scan...")
+    image2 = GdkPixbuf.Pixbuf.new_from_file("./Resources/777.png")
+    notif2.set_icon_from_pixbuf(image2)
+    notif2.set_image_from_pixbuf(image2)
+    notif2.show()
+    os.system("clear")
+    Notify.init("7 7 7")
+    notif3 = Notify.Notification.new("enter root password in terminal...")
+    image4 = GdkPixbuf.Pixbuf.new_from_file("./Resources/Warning.png")
+    notif3.set_icon_from_pixbuf(image4)
+    notif3.set_image_from_pixbuf(image4)
+    notif3.show()
+    os.system("clear")
     subprocess.run(["sudo", "bash", "./Scripts/internal.sh", "arguments"], shell=False)
+    os.system("clear")
     root.update_idletasks()
     Notify.init("7 7 7")
     Notify.Notification.new("Done").show()
@@ -56,6 +61,7 @@ def enscan():
 # Information about 777
 def info():
     webbrowser.open_new("https://777.screenshare.services")
+    os.system("clear")
 
 # Environments scan
 def env():
@@ -73,21 +79,49 @@ def env():
     env.mainloop()
 
 def xfce():
+    Notify.init("7 7 7")
+    notif = Notify.Notification.new("1/1 - Starting XFCE scan...")
+    image = GdkPixbuf.Pixbuf.new_from_file("./Resources/777.png")
+    notif.set_icon_from_pixbuf(image)
+    notif.set_image_from_pixbuf(image)
+    notif.show()
+    os.system("clear")
     subprocess.run(["bash", "./Scripts/xfce.sh", "arguments"], shell=False)
     root.update_idletasks()
     progessBarOne['value']=progessBarOne['value'] = 100
 
 def gnome():
+    Notify.init("7 7 7")
+    notif = Notify.Notification.new("1/1 - Starting GNOME scan...")
+    image = GdkPixbuf.Pixbuf.new_from_file("./Resources/777.png")
+    notif.set_icon_from_pixbuf(image)
+    notif.set_image_from_pixbuf(image)
+    notif.show()
+    os.system("clear")
     subprocess.run(["bash", "./Scripts/gnome.sh", "arguments"], shell=False)
     root.update_idletasks()
     progessBarOne['value']=progessBarOne['value'] = 100
 
 def mate():
+    Notify.init("7 7 7")
+    notif = Notify.Notification.new("1/1 - Starting MATE scan...")
+    image = GdkPixbuf.Pixbuf.new_from_file("./Resources/777.png")
+    notif.set_icon_from_pixbuf(image)
+    notif.set_image_from_pixbuf(image)
+    notif.show()
+    os.system("clear")
     subprocess.run(["bash", "./Scripts/mate.sh", "arguments"], shell=False)
     root.update_idletasks()
     progessBarOne['value']=progessBarOne['value'] = 100
 
 def deep():
+    Notify.init("7 7 7")
+    notif = Notify.Notification.new("1/1 - Starting DEEPIN scan...")
+    image = GdkPixbuf.Pixbuf.new_from_file("./Resources/777.png")
+    notif.set_icon_from_pixbuf(image)
+    notif.set_image_from_pixbuf(image)
+    notif.show()
+    os.system("clear")
     subprocess.run(["bash", "./Scripts/deepin.sh", "arguments"], shell=False)
     root.update_idletasks()
     progessBarOne['value']=progessBarOne['value'] = 100
